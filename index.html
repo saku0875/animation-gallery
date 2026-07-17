@@ -258,10 +258,9 @@ function injectStyle(css, scopeId){
   document.head.appendChild(el);
 }
 
-function stageMarkup(item, i){
-  const id = `sp-${i}`;
-  // demo_html を .demo-stage で包む
-  return {id, html:`<div id="${id}"><div class="demo-stage">${item.demo_html}</div></div>`};
+function stageMarkup(item, scopeId){
+  // demo_html を .demo-stage で包み、指定スコープIDでラップ
+  return {id:scopeId, html:`<div id="${scopeId}"><div class="demo-stage">${item.demo_html}</div></div>`};
 }
 
 function render(){
@@ -297,8 +296,7 @@ function render(){
 
   // --- archive cards ---
   rest.forEach((item,idx)=>{
-    const globalNo = ALL.length - (activeTheme? 0 : 0); // 表示用
-    const {id,html:stage} = stageMarkup(item, idx);
+    const {id,html:stage} = stageMarkup(item, `sp-${idx}`);
     html += `<article class="card" tabindex="0">
       <div class="stage-holder">${stage}</div>
       <div class="meta">
