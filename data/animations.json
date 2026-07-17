@@ -1,1 +1,9 @@
-[]
+[
+  {
+    "date": "2026-07-17",
+    "theme": "地層",
+    "title": "地層の堆積アニメーション",
+    "keyframes_css": "@keyframes slide-in-1 { 0% { transform: translateX(-100%); opacity: 0; } 20% { transform: translateX(0); opacity: 1; } 80% { transform: translateX(0); opacity: 1; } 100% { transform: translateX(100%); opacity: 0; } } @keyframes slide-in-2 { 0% { transform: translateX(100%); opacity: 0; } 25% { transform: translateX(0); opacity: 1; } 75% { transform: translateX(0); opacity: 1; } 100% { transform: translateX(-100%); opacity: 0; } } @keyframes slide-in-3 { 0% { transform: translateX(-100%); opacity: 0; } 30% { transform: translateX(0); opacity: 1; } 70% { transform: translateX(0); opacity: 1; } 100% { transform: translateX(100%); opacity: 0; } } @keyframes slide-in-4 { 0% { transform: translateX(100%); opacity: 0; } 35% { transform: translateX(0); opacity: 1; } 65% { transform: translateX(0); opacity: 1; } 100% { transform: translateX(-100%); opacity: 0; } } .demo-stage { width: 200px; height: 200px; background: linear-gradient(to bottom, #87ceeb 0%, #e0f6ff 100%); position: relative; overflow: hidden; border: 2px solid #333; } .demo-stage .layer { position: absolute; width: 200px; height: 40px; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: bold; color: white; } .demo-stage .layer1 { top: 20px; background: #8b4513; animation: slide-in-1 4s infinite; } .demo-stage .layer2 { top: 60px; background: #a0522d; animation: slide-in-2 4s infinite; } .demo-stage .layer3 { top: 100px; background: #cd853f; animation: slide-in-3 4s infinite; } .demo-stage .layer4 { top: 140px; background: #daa520; animation: slide-in-4 4s infinite; }",
+    "demo_html": "<div class=\"layer layer1\">土壌層</div><div class=\"layer layer2\">粘土層</div><div class=\"layer layer3\">砂層</div><div class=\"layer layer4\">岩盤層</div>"
+  }
+]
