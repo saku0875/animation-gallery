@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Daily Animation Specimens — 日替わりアニメーション標本箱</title>
+<title>Daily Animation gallery — 日替わりアニメーションギャラリー</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -113,7 +113,7 @@
     width:100%;height:168px;overflow:hidden;
     position:relative;
   }
-  .card.today .stage-holder{width:220px;height:200px}
+  .card.today .stage-holder{width:400px;height:200px}
   /* the injected .demo-stage (200x200) scaled to fit landscape stage */
   .card:not(.today) .demo-stage{transform:scale(.72);transform-origin:center}
   .card.today .demo-stage{transform:scale(.92);transform-origin:center}
@@ -154,7 +154,7 @@
     font-family:var(--mono);font-size:11px;color:var(--ink-soft);margin-top:4px;
   }
   .card.today .lead{
-    font-size:12px;color:var(--ink-soft);margin-top:12px;max-width:40ch;line-height:1.6;
+    font-size:12px;color:var(--ink-soft);margin-top:12px;line-height:1.6;
   }
 
   /* archive cards: pause animation until hover/focus for performance */
@@ -196,8 +196,8 @@
 <div class="wrap">
   <aside class="side">
     <div class="brand">
-      <h1>Daily Animation<br>Specimens</h1>
-      <div class="sub">日替わり標本箱</div>
+      <h1>Daily Animation<br>Site</h1>
+      <div class="sub">日替わりアニメーションギャラリー</div>
     </div>
     <div class="label">Themes</div>
     <ul class="filters" id="filters"></ul>
@@ -209,10 +209,10 @@
 
   <main class="main">
     <div class="main-head">
-      <div class="count" id="count">— specimens</div>
+      <div class="count" id="count">— animations</div>
       <div class="today-date" id="today-date"></div>
     </div>
-    <div id="content"><div class="loading">Loading specimens…</div></div>
+    <div id="content"><div class="loading">Loading animations…</div></div>
   </main>
 </div>
 
