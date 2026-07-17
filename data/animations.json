@@ -1,6 +1,13 @@
 [
   {
     "date": "2026-07-17",
+    "theme": "波",
+    "title": "波のゆらぎ",
+    "keyframes_css": "@keyframes wave {\n  0% { transform: translateX(0) translateY(0); }\n  25% { transform: translateX(0) translateY(-8px); }\n  50% { transform: translateX(0) translateY(0); }\n  75% { transform: translateX(0) translateY(8px); }\n  100% { transform: translateX(0) translateY(0); }\n}\n\n.demo-stage {\n  background: #ffffff;\n  width: 200px;\n  height: 200px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: 12px;\n}\n\n.demo-stage > div {\n  width: 12px;\n  height: 60px;\n  background: #c9dff5;\n  border-radius: 6px;\n  animation: wave 1.2s ease-in-out infinite;\n}\n\n.demo-stage > div:nth-child(2) {\n  animation-delay: 0.1s;\n}\n\n.demo-stage > div:nth-child(3) {\n  animation-delay: 0.2s;\n}\n\n.demo-stage > div:nth-child(4) {\n  animation-delay: 0.3s;\n}\n\n.demo-stage > div:nth-child(5) {\n  animation-delay: 0.4s;\n}",
+    "demo_html": "<div></div>\n<div></div>\n<div></div>\n<div></div>\n<div></div>"
+  },
+  {
+    "date": "2026-07-17",
     "theme": "蝉",
     "title": "蝉の鳴き声",
     "keyframes_css": "@keyframes cicada-pulse {\n  0% {\n    transform: scale(1);\n    opacity: 1;\n  }\n  50% {\n    transform: scale(1.1);\n    opacity: 0.7;\n  }\n  100% {\n    transform: scale(1);\n    opacity: 1;\n  }\n}\n\n@keyframes wing-flutter {\n  0% {\n    transform: rotateZ(-2deg);\n  }\n  50% {\n    transform: rotateZ(2deg);\n  }\n  100% {\n    transform: rotateZ(-2deg);\n  }\n}\n\n.demo-stage {\n  width: 200px;\n  height: 200px;\n  background: #ffffff;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.demo-stage .cicada-body {\n  width: 60px;\n  height: 80px;\n  background: linear-gradient(135deg, #d4d4d4 0%, #b0b0b0 100%);\n  border-radius: 50% 50% 45% 45%;\n  position: relative;\n  animation: cicada-pulse 1.2s ease-in-out infinite;\n}\n\n.demo-stage .cicada-body::before {\n  content: '';\n  position: absolute;\n  width: 50px;\n  height: 60px;\n  background: #f5c9d4;\n  border-radius: 50% 50% 40% 40%;\n  top: 10px;\n  left: 5px;\n  opacity: 0.6;\n  animation: wing-flutter 0.3s ease-in-out infinite;\n}",
