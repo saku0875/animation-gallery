@@ -90,16 +90,16 @@
     border:1px solid var(--line);
   }
   .card{
-    background:var(--paper);padding:22px;
-    display:flex;flex-direction:column;gap:16px;
+    background:var(--paper);padding:14px 14px 16px;
+    display:flex;flex-direction:column;gap:10px;
     position:relative;
   }
-  .card.today{grid-column:1 / -1;flex-direction:row;align-items:flex-start;gap:40px;padding:40px}
+  .card.today{grid-column:1 / -1;flex-direction:row;align-items:flex-start;gap:28px;padding:24px}
   .card.today .stage-holder{flex-shrink:0}
-  .card.today .meta{flex:1;padding-top:6px}
+  .card.today .meta{flex:1;padding-top:4px}
 
   .badge{
-    position:absolute;top:0;left:0;
+    position:absolute;top:0;left:0;z-index:3;
     font-family:var(--mono);font-size:9px;font-weight:700;
     letter-spacing:.12em;text-transform:uppercase;
     background:var(--ink);color:#fff;padding:4px 9px;
@@ -110,28 +110,51 @@
     display:flex;align-items:center;justify-content:center;
     background:var(--paper-2);
     border:1px solid var(--line);
-    width:100%;aspect-ratio:1;overflow:hidden;
+    width:100%;height:168px;overflow:hidden;
+    position:relative;
   }
-  .card.today .stage-holder{width:240px;height:240px;aspect-ratio:auto}
-  /* the injected .demo-stage sits inside .stage-holder; scale down small cards */
-  .card:not(.today) .demo-stage{transform:scale(.78);transform-origin:center}
+  .card.today .stage-holder{width:220px;height:200px}
+  /* the injected .demo-stage (200x200) scaled to fit landscape stage */
+  .card:not(.today) .demo-stage{transform:scale(.72);transform-origin:center}
+  .card.today .demo-stage{transform:scale(.92);transform-origin:center}
+
+  /* ---- code / preview toggle ---- */
+  .view-toggle{
+    all:unset;cursor:pointer;position:absolute;top:8px;right:8px;z-index:4;
+    font-family:var(--mono);font-size:9px;letter-spacing:.05em;
+    color:var(--ink-soft);background:rgba(255,255,255,.9);
+    border:1px solid var(--line);border-radius:3px;padding:3px 7px;
+    transition:all .12s;
+  }
+  .view-toggle:hover{color:var(--ink);border-color:var(--ink)}
+  .card.show-code .view-toggle{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .code-view{
+    display:none;position:absolute;inset:0;z-index:2;
+    background:var(--paper-2);
+    font-family:var(--mono);font-size:10px;line-height:1.6;
+    color:var(--ink);padding:12px 14px;margin:0;
+    overflow:auto;white-space:pre-wrap;word-break:break-all;
+    -webkit-overflow-scrolling:touch;
+  }
+  .card.show-code .code-view{display:block}
+  .code-view .cm{color:var(--ink-soft)}
 
   .meta .idx{
     font-family:var(--mono);font-size:10px;color:var(--ink-soft);
-    letter-spacing:.06em;margin-bottom:8px;
+    letter-spacing:.06em;margin-bottom:4px;
   }
-  .meta h2{font-size:15px;font-weight:600;letter-spacing:-.01em;margin-bottom:6px}
-  .card.today .meta h2{font-size:30px;line-height:1.1;margin-bottom:12px}
+  .meta h2{font-size:14px;font-weight:600;letter-spacing:-.01em;margin-bottom:2px}
+  .card.today .meta h2{font-size:24px;line-height:1.15;margin-bottom:8px}
   .meta .theme{
-    font-family:var(--mono);font-size:11px;color:var(--ink-soft);
+    font-family:var(--mono);font-size:10px;color:var(--ink-soft);
     display:inline-block;
   }
-  .card.today .meta .theme{font-size:13px}
+  .card.today .meta .theme{font-size:12px}
   .meta .dateline{
     font-family:var(--mono);font-size:11px;color:var(--ink-soft);margin-top:4px;
   }
   .card.today .lead{
-    font-size:13px;color:var(--ink-soft);margin-top:18px;max-width:38ch;line-height:1.6;
+    font-size:12px;color:var(--ink-soft);margin-top:12px;max-width:40ch;line-height:1.6;
   }
 
   /* archive cards: pause animation until hover/focus for performance */
@@ -142,14 +165,13 @@
   .card:not(.today):focus-within .demo-stage,
   .card:not(.today):focus-within .demo-stage *{animation-play-state:running !important}
   .card:not(.today){cursor:pointer}
-  .card:not(.today) .stage-holder{position:relative}
   .card:not(.today) .stage-holder::after{
-    content:'▶ play';position:absolute;bottom:8px;right:8px;
+    content:'▶ play';position:absolute;bottom:6px;right:6px;z-index:1;
     font-family:var(--mono);font-size:9px;color:var(--ink-soft);
     background:rgba(255,255,255,.82);padding:2px 5px;border-radius:3px;
     opacity:0;transition:opacity .15s;pointer-events:none;
   }
-  .card:not(.today):not(:hover) .stage-holder::after{opacity:.85}
+  .card:not(.today):not(:hover):not(.show-code) .stage-holder::after{opacity:.85}
 
   .loading{padding:80px 44px;font-family:var(--mono);font-size:13px;color:var(--ink-soft)}
   .empty{padding:60px 0;font-family:var(--mono);font-size:13px;color:var(--ink-soft)}
@@ -160,9 +182,9 @@
     .side{position:static;height:auto;border-right:none;border-bottom:1px solid var(--line);
       flex-direction:column}
     .side-foot{margin-top:24px}
-    .main{padding:28px 20px 60px}
-    .card.today{flex-direction:column;align-items:flex-start;gap:24px;padding:24px}
-    .card.today .stage-holder{width:200px;height:200px}
+    .main{padding:24px 16px 60px}
+    .card.today{flex-direction:column;align-items:stretch;gap:14px;padding:16px}
+    .card.today .stage-holder{width:100%;height:180px}
     .grid{grid-template-columns:1fr}
   }
   @media(prefers-reduced-motion:reduce){
@@ -258,6 +280,14 @@ function injectStyle(css, scopeId){
   document.head.appendChild(el);
 }
 
+function escapeHtml(s){
+  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+function codeBlock(item){
+  return `<span class="cm">/* CSS */</span>\n${escapeHtml(item.keyframes_css)}\n\n<span class="cm">&lt;!-- HTML --&gt;</span>\n${escapeHtml(item.demo_html)}`;
+}
+
 function stageMarkup(item, scopeId){
   // demo_html を .demo-stage で包み、指定スコープIDでラップ
   return {id:scopeId, html:`<div id="${scopeId}"><div class="demo-stage">${item.demo_html}</div></div>`};
@@ -284,7 +314,11 @@ function render(){
     const {id,html:stage} = stageMarkup(today, 'today');
     html += `<article class="card today">
       <span class="badge">Today ◍</span>
-      <div class="stage-holder">${stage}</div>
+      <div class="stage-holder">
+        ${stage}
+        <pre class="code-view">${codeBlock(today)}</pre>
+        <button class="view-toggle" type="button">&lt;/&gt; code</button>
+      </div>
       <div class="meta">
         <div class="idx">No.${String(ALL.length).padStart(3,'0')} / ${today.date}</div>
         <h2>${today.title||today.theme}</h2>
@@ -298,7 +332,11 @@ function render(){
   rest.forEach((item,idx)=>{
     const {id,html:stage} = stageMarkup(item, `sp-${idx}`);
     html += `<article class="card" tabindex="0">
-      <div class="stage-holder">${stage}</div>
+      <div class="stage-holder">
+        ${stage}
+        <pre class="code-view">${codeBlock(item)}</pre>
+        <button class="view-toggle" type="button">&lt;/&gt;</button>
+      </div>
       <div class="meta">
         <div class="idx">${item.date}</div>
         <h2>${item.title||item.theme}</h2>
@@ -312,6 +350,17 @@ function render(){
 
   // スタイル注入（today = 'today', archive = index）
   injectAll(today, rest);
+
+  // code/preview トグル（イベント委任）
+  content.querySelectorAll('.view-toggle').forEach(btn=>{
+    btn.addEventListener('click', (e)=>{
+      e.stopPropagation();
+      const card = btn.closest('.card');
+      card.classList.toggle('show-code');
+      const isCode = card.classList.contains('show-code');
+      btn.innerHTML = isCode ? '◍ preview' : (card.classList.contains('today') ? '&lt;/&gt; code' : '&lt;/&gt;');
+    });
+  });
 }
 
 function injectAll(today, rest){
