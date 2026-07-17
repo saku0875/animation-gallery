@@ -1,1 +1,9 @@
-[]
+[
+  {
+    "date": "2026-07-17",
+    "theme": "落ちてくる雨粒",
+    "title": "落ちてくる雨粒",
+    "keyframes_css": "@keyframes fall {\n  0% {\n    transform: translateY(-20px);\n    opacity: 1;\n  }\n  100% {\n    transform: translateY(180px);\n    opacity: 0;\n  }\n}\n\n.demo-stage {\n  width: 200px;\n  height: 200px;\n  background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%);\n  border-radius: 8px;\n  overflow: hidden;\n  position: relative;\n}\n\n.demo-stage::before,\n.demo-stage::after {\n  content: '';\n  position: absolute;\n  width: 3px;\n  height: 3px;\n  background: #64b5f6;\n  border-radius: 50%;\n  animation: fall 1.5s infinite ease-in;\n}\n\n.demo-stage::before {\n  left: 30%;\n  animation-delay: 0s;\n}\n\n.demo-stage::after {\n  left: 60%;\n  animation-delay: 0.5s;\n}\n\n.demo-stage .drop1 {\n  position: absolute;\n  width: 3px;\n  height: 3px;\n  background: #64b5f6;\n  border-radius: 50%;\n  left: 45%;\n  animation: fall 1.5s infinite ease-in;\n  animation-delay: 1s;\n}\n\n.demo-stage .drop2 {\n  position: absolute;\n  width: 3px;\n  height: 3px;\n  background: #64b5f6;\n  border-radius: 50%;\n  left: 75%;\n  animation: fall 1.5s infinite ease-in;\n  animation-delay: 0.25s;\n}\n\n.demo-stage .drop3 {\n  position: absolute;\n  width: 3px;\n  height: 3px;\n  background: #64b5f6;\n  border-radius: 50%;\n  left: 15%;\n  animation: fall 1.5s infinite ease-in;\n  animation-delay: 0.75s;\n}",
+    "demo_html": "<div class=\"drop1\"></div>\n<div class=\"drop2\"></div>\n<div class=\"drop3\"></div>"
+  }
+]
