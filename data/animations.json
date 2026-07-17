@@ -1,6 +1,13 @@
 [
   {
     "date": "2026-07-17",
+    "theme": "蝉",
+    "title": "蝉の鳴き声",
+    "keyframes_css": "@keyframes cicada-pulse {\n  0% {\n    transform: scale(1);\n    opacity: 1;\n  }\n  50% {\n    transform: scale(1.1);\n    opacity: 0.7;\n  }\n  100% {\n    transform: scale(1);\n    opacity: 1;\n  }\n}\n\n@keyframes wing-flutter {\n  0% {\n    transform: rotateZ(-2deg);\n  }\n  50% {\n    transform: rotateZ(2deg);\n  }\n  100% {\n    transform: rotateZ(-2deg);\n  }\n}\n\n.demo-stage {\n  width: 200px;\n  height: 200px;\n  background: #ffffff;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.demo-stage .cicada-body {\n  width: 60px;\n  height: 80px;\n  background: linear-gradient(135deg, #d4d4d4 0%, #b0b0b0 100%);\n  border-radius: 50% 50% 45% 45%;\n  position: relative;\n  animation: cicada-pulse 1.2s ease-in-out infinite;\n}\n\n.demo-stage .cicada-body::before {\n  content: '';\n  position: absolute;\n  width: 50px;\n  height: 60px;\n  background: #f5c9d4;\n  border-radius: 50% 50% 40% 40%;\n  top: 10px;\n  left: 5px;\n  opacity: 0.6;\n  animation: wing-flutter 0.3s ease-in-out infinite;\n}",
+    "demo_html": "<div class=\"cicada-body\"></div>"
+  },
+  {
+    "date": "2026-07-17",
     "theme": "火",
     "title": "Floating Flame",
     "keyframes_css": "@keyframes flicker {\n  0%, 100% { transform: translateY(0) scaleY(1); opacity: 0.8; }\n  25% { transform: translateY(-8px) scaleY(1.1); opacity: 0.9; }\n  50% { transform: translateY(-4px) scaleY(0.95); opacity: 0.7; }\n  75% { transform: translateY(-6px) scaleY(1.05); opacity: 0.85; }\n}\n\n@keyframes rise {\n  0% { transform: translateY(0); opacity: 1; }\n  100% { transform: translateY(-40px); opacity: 0; }\n}\n\n.demo-stage {\n  background: #ffffff;\n  display: flex;\n  align-items: flex-end;\n  justify-content: center;\n  overflow: hidden;\n}\n\n.demo-stage .flame-core {\n  width: 24px;\n  height: 32px;\n  background: linear-gradient(to top, #f5c9d4 0%, #f0e0c0 100%);\n  border-radius: 50% 50% 40% 40%;\n  animation: flicker 1.2s ease-in-out infinite;\n  position: relative;\n}\n\n.demo-stage .flame-core::before {\n  content: '';\n  position: absolute;\n  width: 16px;\n  height: 24px;\n  background: #f0e0c0;\n  border-radius: 50% 50% 30% 30%;\n  top: -8px;\n  left: 4px;\n  animation: flicker 1.4s ease-in-out infinite 0.1s;\n}\n\n.demo-stage .spark {\n  position: absolute;\n  width: 4px;\n  height: 4px;\n  background: #f5c9d4;\n  border-radius: 50%;\n  animation: rise 1.6s ease-out infinite;\n}\n\n.demo-stage .spark:nth-child(2) {\n  left: 8px;\n  animation-delay: 0.3s;\n}\n\n.demo-stage .spark:nth-child(3) {\n  left: -8px;\n  animation-delay: 0.6s;\n}",
