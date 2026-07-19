@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-07-19",
+    "theme": "雨",
+    "title": "Falling Rain",
+    "keyframes_css": "@keyframes fall {\n  0% {\n    transform: translateY(-10px);\n    opacity: 1;\n  }\n  90% {\n    opacity: 1;\n  }\n  100% {\n    transform: translateY(200px);\n    opacity: 0;\n  }\n}\n\n.demo-stage {\n  width: 200px;\n  height: 200px;\n  background: linear-gradient(180deg, #2c3e50 0%, #34495e 100%);\n  overflow: hidden;\n  position: relative;\n}\n\n.demo-stage::before,\n.demo-stage::after {\n  content: '';\n  position: absolute;\n  width: 2px;\n  height: 10px;\n  background: #ecf0f1;\n  animation: fall 1s infinite linear;\n}\n\n.demo-stage::before {\n  left: 30px;\n  animation-delay: 0s;\n}\n\n.demo-stage::after {\n  left: 80px;\n  animation-delay: 0.3s;\n}\n\n.demo-stage .rain1 {\n  position: absolute;\n  width: 2px;\n  height: 10px;\n  background: #ecf0f1;\n  animation: fall 1.2s infinite linear;\n}\n\n.demo-stage .rain1:nth-child(1) {\n  left: 50px;\n  animation-delay: 0.1s;\n}\n\n.demo-stage .rain1:nth-child(2) {\n  left: 120px;\n  animation-delay: 0.5s;\n}\n\n.demo-stage .rain1:nth-child(3) {\n  left: 150px;\n  animation-delay: 0.8s;\n}",
+    "demo_html": "<div class=\"rain1\"></div><div class=\"rain1\"></div><div class=\"rain1\"></div>"
+  },
+  {
     "date": "2026-07-18",
     "theme": "振り子",
     "title": "振り子のゆらぎ",
