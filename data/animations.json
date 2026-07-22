@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-07-22",
+    "theme": "重力",
+    "title": "Falling Gravity",
+    "keyframes_css": "@keyframes fall {\n  0% {\n    transform: translateY(-180px);\n    opacity: 1;\n  }\n  90% {\n    opacity: 1;\n  }\n  100% {\n    transform: translateY(0);\n    opacity: 0;\n  }\n}\n\n@keyframes bounce {\n  0%, 100% {\n    transform: scaleY(1);\n  }\n  50% {\n    transform: scaleY(0.8);\n  }\n}\n\n.demo-stage {\n  width: 200px;\n  height: 200px;\n  background: linear-gradient(180deg, #87ceeb 0%, #e0f6ff 100%);\n  position: relative;\n  overflow: hidden;\n  border-radius: 8px;\n}\n\n.demo-stage::before {\n  content: '';\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  height: 20px;\n  background: #8b7355;\n  border-top: 3px solid #654321;\n}\n\n.ball {\n  position: absolute;\n  width: 24px;\n  height: 24px;\n  background: radial-gradient(circle at 30% 30%, #ff6b6b, #cc0000);\n  border-radius: 50%;\n  left: 50%;\n  transform: translateX(-50%);\n  box-shadow: inset -2px -2px 4px rgba(0, 0, 0, 0.3);\n}\n\n.ball:nth-child(1) {\n  animation: fall 2s ease-in infinite;\n}\n\n.ball:nth-child(2) {\n  animation: fall 2s ease-in infinite 0.6s;\n}\n\n.ball:nth-child(3) {\n  animation: fall 2s ease-in infinite 1.2s;\n}\n\n.demo-stage::after {\n  content: '';\n  position: absolute;\n  bottom: 20px;\n  left: 50%;\n  transform: translateX(-50%);\n  width: 24px;\n  height: 24px;\n  background: radial-gradient(circle at 30% 30%, #ff6b6b, #cc0000);\n  border-radius: 50%;\n  box-shadow: inset -2px -2px 4px rgba(0, 0, 0, 0.3);\n  animation: bounce 0.6s ease-in-out infinite;\n}",
+    "demo_html": "<div class=\"ball\"></div>\n<div class=\"ball\"></div>\n<div class=\"ball\"></div>"
+  },
+  {
     "date": "2026-07-21",
     "theme": "呼吸",
     "title": "呼吸する円",
