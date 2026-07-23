@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-07-23",
+    "theme": "波紋",
+    "title": "波紋エフェクト",
+    "keyframes_css": "@keyframes ripple {\n  0% {\n    width: 0;\n    height: 0;\n    opacity: 1;\n  }\n  100% {\n    width: 200px;\n    height: 200px;\n    opacity: 0;\n  }\n}\n\n@keyframes ripple2 {\n  0% {\n    width: 0;\n    height: 0;\n    opacity: 1;\n  }\n  100% {\n    width: 180px;\n    height: 180px;\n    opacity: 0;\n  }\n}\n\n@keyframes ripple3 {\n  0% {\n    width: 0;\n    height: 0;\n    opacity: 1;\n  }\n  100% {\n    width: 160px;\n    height: 160px;\n    opacity: 0;\n  }\n}\n\n.demo-stage {\n  width: 200px;\n  height: 200px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);\n  border-radius: 10px;\n  overflow: hidden;\n  position: relative;\n}\n\n.demo-stage::before,\n.demo-stage::after {\n  content: '';\n  position: absolute;\n  border: 2px solid rgba(255, 255, 255, 0.8);\n  border-radius: 50%;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n}\n\n.demo-stage::before {\n  animation: ripple 2s ease-out infinite;\n}\n\n.demo-stage::after {\n  animation: ripple2 2s ease-out 0.6s infinite;\n}\n\n.demo-stage .ripple-dot {\n  position: absolute;\n  width: 12px;\n  height: 12px;\n  background: white;\n  border-radius: 50%;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  z-index: 10;\n  box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);\n}\n\n.demo-stage .ripple-dot::before {\n  content: '';\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  border: 2px solid rgba(255, 255, 255, 0.6);\n  border-radius: 50%;\n  top: -8px;\n  left: -8px;\n  animation: ripple3 2s ease-out 1.2s infinite;\n}",
+    "demo_html": "<div class=\"ripple-dot\"></div>"
+  },
+  {
     "date": "2026-07-22",
     "theme": "重力",
     "title": "Falling Gravity",
