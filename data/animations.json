@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-07-30",
+    "theme": "signal",
+    "title": "Signal Pulse",
+    "keyframes_css": "@keyframes pulse-ring {\n  0% {\n    width: 30px;\n    height: 30px;\n    opacity: 1;\n  }\n  100% {\n    width: 120px;\n    height: 120px;\n    opacity: 0;\n  }\n}\n\n@keyframes blink-light {\n  0%, 100% {\n    background-color: #ff3333;\n    box-shadow: 0 0 10px #ff3333;\n  }\n  50% {\n    background-color: #ff6666;\n    box-shadow: 0 0 20px #ff3333;\n  }\n}\n\n.demo-stage {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 200px;\n  height: 200px;\n  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);\n  border-radius: 10px;\n}\n\n.demo-stage .signal-container {\n  position: relative;\n  width: 120px;\n  height: 120px;\n}\n\n.demo-stage .signal-center {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  width: 30px;\n  height: 30px;\n  background-color: #ff3333;\n  border-radius: 50%;\n  box-shadow: 0 0 10px #ff3333;\n  animation: blink-light 1s ease-in-out infinite;\n  z-index: 3;\n}\n\n.demo-stage .signal-ring {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  border: 2px solid #ff3333;\n  border-radius: 50%;\n  animation: pulse-ring 1.5s ease-out infinite;\n}\n\n.demo-stage .signal-ring:nth-child(2) {\n  animation-delay: 0.5s;\n}\n\n.demo-stage .signal-ring:nth-child(3) {\n  animation-delay: 1s;\n}",
+    "demo_html": "<div class=\"signal-container\">\n  <div class=\"signal-center\"></div>\n  <div class=\"signal-ring\"></div>\n  <div class=\"signal-ring\"></div>\n  <div class=\"signal-ring\"></div>\n</div>"
+  },
+  {
     "date": "2026-07-29",
     "theme": "コーヒーが冷める",
     "title": "コーヒーが冷める",
