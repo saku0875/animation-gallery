@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-08-01",
+    "theme": "潮の満ち引き",
+    "title": "潮の満ち引き",
+    "keyframes_css": "@keyframes wave-rise {\n  0% {\n    transform: translateY(40px);\n    opacity: 0.6;\n  }\n  50% {\n    transform: translateY(-20px);\n    opacity: 1;\n  }\n  100% {\n    transform: translateY(40px);\n    opacity: 0.6;\n  }\n}\n\n@keyframes wave-wave {\n  0% {\n    d: path('M0,50 Q25,40 50,50 T100,50 L100,100 L0,100 Z');\n  }\n  50% {\n    d: path('M0,30 Q25,10 50,30 T100,30 L100,100 L0,100 Z');\n  }\n  100% {\n    d: path('M0,50 Q25,40 50,50 T100,50 L100,100 L0,100 Z');\n  }\n}\n\n@keyframes moon-glow {\n  0% {\n    filter: drop-shadow(0 0 4px rgba(200, 180, 100, 0.5));\n  }\n  50% {\n    filter: drop-shadow(0 0 12px rgba(200, 180, 100, 0.8));\n  }\n  100% {\n    filter: drop-shadow(0 0 4px rgba(200, 180, 100, 0.5));\n  }\n}\n\n.demo-stage {\n  width: 200px;\n  height: 200px;\n  background: linear-gradient(180deg, #0a1a3a 0%, #1a3a5a 40%, #2a4a6a 100%);\n  border-radius: 8px;\n  overflow: hidden;\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.demo-stage svg {\n  width: 200px;\n  height: 200px;\n  position: absolute;\n}\n\n.demo-stage .moon {\n  width: 40px;\n  height: 40px;\n  background: #f4d47a;\n  border-radius: 50%;\n  position: absolute;\n  top: 20px;\n  left: 80px;\n  animation: moon-glow 4s ease-in-out infinite;\n}\n\n.demo-stage .wave-path {\n  animation: wave-wave 4s ease-in-out infinite;\n  fill: rgba(70, 130, 180, 0.6);\n}\n\n.demo-stage .water-level {\n  animation: wave-rise 4s ease-in-out infinite;\n  transform-origin: center;\n}",
+    "demo_html": "<div class=\"moon\"></div>\n<svg viewBox=\"0 0 200 200\" preserveAspectRatio=\"none\">\n  <g class=\"water-level\">\n    <path class=\"wave-path\" d=\"M0,50 Q25,40 50,50 T100,50 L100,200 L0,200 Z\"/>\n  </g>\n  <g class=\"water-level\" style=\"animation-delay: 0.5s;\">\n    <path class=\"wave-path\" style=\"fill: rgba(100, 149, 237, 0.4);\" d=\"M0,60 Q25,50 50,60 T100,60 L100,200 L0,200 Z\"/>\n  </g>\n</svg>"
+  },
+  {
     "date": "2026-07-31",
     "theme": "折り紙",
     "title": "折り紙アニメーション",
