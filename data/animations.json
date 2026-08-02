@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-08-02",
+    "theme": "回転寿司",
+    "title": "回転寿司",
+    "keyframes_css": "@keyframes rotate {\n  from {\n    transform: rotateZ(0deg);\n  }\n  to {\n    transform: rotateZ(360deg);\n  }\n}\n\n@keyframes float {\n  0%, 100% {\n    transform: translateY(0px);\n  }\n  50% {\n    transform: translateY(-8px);\n  }\n}\n\n.demo-stage {\n  width: 200px;\n  height: 200px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  background: linear-gradient(135deg, #e3f2fd 0%, #fff3e0 100%);\n  border-radius: 10px;\n  overflow: hidden;\n}\n\n.demo-stage .conveyor {\n  position: relative;\n  width: 180px;\n  height: 120px;\n  border: 3px solid #8b4513;\n  border-radius: 8px;\n  background: #fafafa;\n  animation: float 2s ease-in-out infinite;\n}\n\n.demo-stage .sushi {\n  position: absolute;\n  width: 40px;\n  height: 30px;\n  border-radius: 50% 50% 45% 45%;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  animation: rotate 3s linear infinite;\n}\n\n.demo-stage .sushi:nth-child(1) {\n  left: 20px;\n  top: 45px;\n  background: #ff6b9d;\n  animation-delay: 0s;\n}\n\n.demo-stage .sushi:nth-child(2) {\n  left: 70px;\n  top: 50px;\n  background: #ffa502;\n  animation-delay: -1s;\n}\n\n.demo-stage .sushi:nth-child(3) {\n  left: 120px;\n  top: 45px;\n  background: #4ecdc4;\n  animation-delay: -2s;\n}\n\n.demo-stage .sushi::before {\n  content: '';\n  position: absolute;\n  width: 10px;\n  height: 15px;\n  background: rgba(255, 255, 255, 0.6);\n  border-radius: 50%;\n  top: 4px;\n  left: 8px;\n}",
+    "demo_html": "<div class=\"conveyor\">\n  <div class=\"sushi\"></div>\n  <div class=\"sushi\"></div>\n  <div class=\"sushi\"></div>\n</div>"
+  },
+  {
     "date": "2026-08-01",
     "theme": "潮の満ち引き",
     "title": "潮の満ち引き",
