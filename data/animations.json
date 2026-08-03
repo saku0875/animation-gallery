@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-08-03",
+    "theme": "心電図",
+    "title": "心電図アニメーション",
+    "keyframes_css": "@keyframes heartbeat {\n  0% {\n    stroke-dashoffset: 1000;\n  }\n  50% {\n    stroke-dashoffset: 0;\n  }\n  100% {\n    stroke-dashoffset: -1000;\n  }\n}\n\n@keyframes pulse {\n  0%, 100% {\n    opacity: 1;\n  }\n  50% {\n    opacity: 0.5;\n  }\n}\n\n.demo-stage {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 200px;\n  height: 200px;\n  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);\n  border-radius: 10px;\n  overflow: hidden;\n}\n\n.demo-stage svg {\n  width: 180px;\n  height: 60px;\n}\n\n.demo-stage polyline {\n  fill: none;\n  stroke: #00ff88;\n  stroke-width: 2;\n  stroke-linecap: round;\n  stroke-linejoin: round;\n  stroke-dasharray: 1000;\n  animation: heartbeat 2s linear infinite;\n  filter: drop-shadow(0 0 4px #00ff88);\n}\n\n.demo-stage circle {\n  fill: #ff4444;\n  animation: pulse 1s ease-in-out infinite;\n}",
+    "demo_html": "<svg viewBox=\"0 0 400 100\" preserveAspectRatio=\"xMidYMid meet\">\n  <polyline points=\"10,50 40,50 50,30 60,70 70,40 90,50 120,50 140,20 160,80 170,50 200,50 230,50 250,35 265,65 280,50 320,50 350,50 380,50 390,50\"></polyline>\n  <circle cx=\"15\" cy=\"50\" r=\"2\"></circle>\n</svg>"
+  },
+  {
     "date": "2026-08-02",
     "theme": "回転寿司",
     "title": "回転寿司",
