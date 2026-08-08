@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-08-08",
+    "theme": "雨",
+    "title": "降る雨",
+    "keyframes_css": "@keyframes fall {\n  0% {\n    transform: translateY(-20px);\n    opacity: 1;\n  }\n  90% {\n    opacity: 1;\n  }\n  100% {\n    transform: translateY(180px);\n    opacity: 0;\n  }\n}\n\n@keyframes fall-delay-1 {\n  0% {\n    transform: translateY(-20px);\n    opacity: 1;\n  }\n  90% {\n    opacity: 1;\n  }\n  100% {\n    transform: translateY(180px);\n    opacity: 0;\n  }\n}\n\n@keyframes fall-delay-2 {\n  0% {\n    transform: translateY(-20px);\n    opacity: 1;\n  }\n  90% {\n    opacity: 1;\n  }\n  100% {\n    transform: translateY(180px);\n    opacity: 0;\n  }\n}\n\n.demo-stage {\n  width: 200px;\n  height: 200px;\n  background: linear-gradient(180deg, #4a5f7f 0%, #2c3e50 100%);\n  border-radius: 8px;\n  overflow: hidden;\n  position: relative;\n}\n\n.demo-stage::before,\n.demo-stage::after {\n  content: '';\n  position: absolute;\n  width: 2px;\n  background: #a8d8ff;\n  border-radius: 1px;\n  animation: fall 1.5s ease-in infinite;\n}\n\n.demo-stage::before {\n  left: 30px;\n  top: -20px;\n  height: 8px;\n  animation-delay: 0s;\n}\n\n.demo-stage::after {\n  left: 80px;\n  top: -20px;\n  height: 8px;\n  animation-delay: 0.5s;\n}\n\n.rain-drop {\n  position: absolute;\n  width: 2px;\n  height: 8px;\n  background: #a8d8ff;\n  border-radius: 1px;\n  animation: fall 1.5s ease-in infinite;\n}\n\n.rain-drop:nth-child(1) {\n  left: 50px;\n  animation-delay: 0.3s;\n}\n\n.rain-drop:nth-child(2) {\n  left: 110px;\n  animation-delay: 0.8s;\n}\n\n.rain-drop:nth-child(3) {\n  left: 150px;\n  animation-delay: 0.1s;\n}",
+    "demo_html": "<div class=\"rain-drop\"></div>\n<div class=\"rain-drop\"></div>\n<div class=\"rain-drop\"></div>"
+  },
+  {
     "date": "2026-08-07",
     "theme": "振り子",
     "title": "振り子",
