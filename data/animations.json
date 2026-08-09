@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-08-09",
+    "theme": "ネオン",
+    "title": "ネオン グロー パルス",
+    "keyframes_css": "@keyframes neon-glow {\n  0%, 100% {\n    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00;\n    color: #00ff00;\n  }\n  50% {\n    text-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00, 0 0 60px #00ff00;\n    color: #ffffff;\n  }\n}\n\n@keyframes flicker {\n  0%, 100% {\n    opacity: 1;\n  }\n  42% {\n    opacity: 0.95;\n  }\n  43% {\n    opacity: 1;\n  }\n  44% {\n    opacity: 0.97;\n  }\n  58% {\n    opacity: 1;\n  }\n  59% {\n    opacity: 0.92;\n  }\n  60% {\n    opacity: 1;\n  }\n}\n\n.demo-stage {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 200px;\n  height: 200px;\n  background: #000;\n  border: 2px solid #00ff00;\n  border-radius: 8px;\n  box-shadow: 0 0 20px rgba(0, 255, 0, 0.5) inset;\n}\n\n.demo-stage .neon-text {\n  font-size: 32px;\n  font-weight: bold;\n  font-family: 'Arial', sans-serif;\n  letter-spacing: 2px;\n  animation: neon-glow 2s ease-in-out infinite, flicker 3s ease-in-out infinite;\n  color: #00ff00;\n}",
+    "demo_html": "<div class=\"neon-text\">NEON</div>"
+  },
+  {
     "date": "2026-08-08",
     "theme": "雨",
     "title": "降る雨",
