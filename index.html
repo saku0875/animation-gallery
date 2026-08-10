@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Daily Animation gallery — 日替わりアニメーションギャラリー</title>
+<title>Daily Animation Gallery — 日替わりアニメーションギャラリー</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -108,12 +108,14 @@
 
   .stage-holder{
     display:flex;align-items:center;justify-content:center;
-    background:var(--paper-2);
+    background:#f0efe9;
     border:1px solid var(--line);
     width:100%;height:168px;overflow:hidden;
     position:relative;
   }
-  .card.today .stage-holder{width:400px;height:200px}
+  /* 作品側がサイズ未指定でも潰れないフォールバック */
+  .stage-holder .demo-stage{width:200px;height:200px;position:relative}
+  .card.today .stage-holder{width:220px;height:200px}
   /* the injected .demo-stage (200x200) scaled to fit landscape stage */
   .card:not(.today) .demo-stage{transform:scale(.72);transform-origin:center}
   .card.today .demo-stage{transform:scale(.92);transform-origin:center}
@@ -154,7 +156,7 @@
     font-family:var(--mono);font-size:11px;color:var(--ink-soft);margin-top:4px;
   }
   .card.today .lead{
-    font-size:12px;color:var(--ink-soft);margin-top:12px;line-height:1.6;
+    font-size:12px;color:var(--ink-soft);margin-top:12px;max-width:40ch;line-height:1.6;
   }
 
   /* archive cards: pause animation until hover/focus for performance */
@@ -196,8 +198,8 @@
 <div class="wrap">
   <aside class="side">
     <div class="brand">
-      <h1>Daily Animation<br>Site</h1>
-      <div class="sub">日替わりアニメーションギャラリー</div>
+      <h1>Daily Animation<br>Specimens</h1>
+      <div class="sub">日替わり標本箱</div>
     </div>
     <div class="label">Themes</div>
     <ul class="filters" id="filters"></ul>
@@ -209,10 +211,10 @@
 
   <main class="main">
     <div class="main-head">
-      <div class="count" id="count">— animations</div>
+      <div class="count" id="count">— gallery</div>
       <div class="today-date" id="today-date"></div>
     </div>
-    <div id="content"><div class="loading">Loading animations…</div></div>
+    <div id="content"><div class="loading">Loading gallery…</div></div>
   </main>
 </div>
 
@@ -245,7 +247,7 @@ async function load(){
   }
   if(!data){
     document.getElementById('content').innerHTML =
-      '<div class="empty">まだ標本がありません。最初のアニメーションが生成されるのをお待ちください。</div>';
+      '<div class="empty">最初のアニメーションが生成されるのをお待ちください。</div>';
     return;
   }
   // 新しい順（date降順）に整列
@@ -305,12 +307,14 @@ function render(){
   // 古いstyleタグ掃除（再描画時の重複防止）
   document.querySelectorAll('style[data-specimen]').forEach(e=>e.remove());
 
-  const today = list[0];
-  const rest = list.slice(1);
+  // フィルタなし: 先頭をTodayカードに / フィルタあり: 全件を均等一覧に
+  const showToday = !activeTheme;
+  const today = showToday ? list[0] : null;
+  const rest = showToday ? list.slice(1) : list;
   let html = '<div class="grid">';
 
-  // --- today card ---
-  {
+  // --- today card (全件表示のときだけ) ---
+  if(today){
     const {id,html:stage} = stageMarkup(today, 'today');
     html += `<article class="card today">
       <span class="badge">Today ◍</span>
@@ -323,12 +327,12 @@ function render(){
         <div class="idx">No.${String(ALL.length).padStart(3,'0')} / ${today.date}</div>
         <h2>${today.title||today.theme}</h2>
         <span class="theme">theme — ${today.theme}</span>
-        <p class="lead">本日の標本。Claude がテーマ「${today.theme}」から生成した CSS アニメーションです。</p>
+        <p class="lead">本日のアニメーション。Claude がテーマ「${today.theme}」から生成した CSS アニメーションです。</p>
       </div>
     </article>`;
   }
 
-  // --- archive cards ---
+  // --- archive / filtered cards ---
   rest.forEach((item,idx)=>{
     const {id,html:stage} = stageMarkup(item, `sp-${idx}`);
     html += `<article class="card" tabindex="0">
@@ -348,10 +352,10 @@ function render(){
   html += '</div>';
   content.innerHTML = html;
 
-  // スタイル注入（today = 'today', archive = index）
+  // スタイル注入（today = 'today' or なし, それ以外 = sp-index）
   injectAll(today, rest);
 
-  // code/preview トグル（イベント委任）
+  // code/preview トグル
   content.querySelectorAll('.view-toggle').forEach(btn=>{
     btn.addEventListener('click', (e)=>{
       e.stopPropagation();
@@ -366,7 +370,7 @@ function render(){
 function injectAll(today, rest){
   const style=document.createElement('style');
   style.setAttribute('data-specimen','1');
-  let css = today.keyframes_css.replace(/\.demo-stage/g, '#today .demo-stage') + '\n';
+  let css = today ? today.keyframes_css.replace(/\.demo-stage/g, '#today .demo-stage') + '\n' : '';
   rest.forEach((item,idx)=>{
     css += item.keyframes_css.replace(/\.demo-stage/g, `#sp-${idx} .demo-stage`) + '\n';
   });
