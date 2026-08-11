@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-08-11",
+    "theme": "重力",
+    "title": "Gravity Drop",
+    "keyframes_css": "@keyframes fall {\n  0% {\n    transform: translateY(-160px);\n    opacity: 1;\n  }\n  85% {\n    opacity: 1;\n  }\n  100% {\n    transform: translateY(0);\n    opacity: 0;\n  }\n}\n\n@keyframes bounce {\n  0%, 100% {\n    transform: scaleY(1);\n  }\n  50% {\n    transform: scaleY(0.8);\n  }\n}\n\n.demo-stage {\n  width: 200px;\n  height: 200px;\n  background: linear-gradient(to bottom, #87ceeb 0%, #e0f6ff 100%);\n  position: relative;\n  overflow: hidden;\n  border-radius: 8px;\n}\n\n.demo-stage .drop {\n  position: absolute;\n  width: 20px;\n  height: 20px;\n  background: radial-gradient(circle at 30% 30%, #64b5f6, #1976d2);\n  border-radius: 50%;\n  left: 50%;\n  margin-left: -10px;\n  animation: fall 2s ease-in infinite;\n}\n\n.demo-stage .drop:nth-child(1) {\n  animation-delay: 0s;\n}\n\n.demo-stage .drop:nth-child(2) {\n  animation-delay: 0.5s;\n}\n\n.demo-stage .drop:nth-child(3) {\n  animation-delay: 1s;\n}\n\n.demo-stage .ground {\n  position: absolute;\n  bottom: 20px;\n  left: 50%;\n  width: 40px;\n  height: 40px;\n  background: radial-gradient(circle at 30% 30%, #90caf9, #1565c0);\n  border-radius: 50%;\n  margin-left: -20px;\n  animation: bounce 0.6s ease-in-out infinite;\n}",
+    "demo_html": "<div class=\"drop\"></div>\n<div class=\"drop\"></div>\n<div class=\"drop\"></div>\n<div class=\"ground\"></div>"
+  },
+  {
     "date": "2026-08-10",
     "theme": "呼吸",
     "title": "呼吸する円",
