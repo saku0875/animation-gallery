@@ -189,8 +189,15 @@
     .card.today .stage-holder{width:100%;height:180px}
     .grid{grid-template-columns:1fr}
   }
-  @media(prefers-reduced-motion:reduce){
-    *{animation:none !important}
+   @media(prefers-reduced-motion:reduce){
+    /* 自動再生を止める(Todayカード含む)が、animation自体は消さない */
+    .card.today .demo-stage,
+    .card.today .demo-stage *{animation-play-state:paused !important}
+    /* 本人がホバー/タップしたときだけ再生を許可 */
+    .card.today:hover .demo-stage,
+    .card.today:hover .demo-stage *,
+    .card.today:focus-within .demo-stage,
+    .card.today:focus-within .demo-stage *{animation-play-state:running !important}
   }
 </style>
 </head>
