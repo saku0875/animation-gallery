@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-08-13",
+    "theme": "点滅する蛍",
+    "title": "点滅する蛍",
+    "keyframes_css": "@keyframes firefly-glow {\n  0% {\n    opacity: 0;\n    box-shadow: 0 0 10px rgba(255, 200, 0, 0);\n  }\n  50% {\n    opacity: 1;\n    box-shadow: 0 0 20px rgba(255, 200, 0, 0.8), 0 0 30px rgba(255, 200, 0, 0.4);\n  }\n  100% {\n    opacity: 0;\n    box-shadow: 0 0 10px rgba(255, 200, 0, 0);\n  }\n}\n\n@keyframes firefly-float {\n  0% {\n    transform: translate(0, 0);\n  }\n  25% {\n    transform: translate(30px, -40px);\n  }\n  50% {\n    transform: translate(-20px, -20px);\n  }\n  75% {\n    transform: translate(40px, 10px);\n  }\n  100% {\n    transform: translate(0, 0);\n  }\n}\n\n.demo-stage {\n  width: 200px;\n  height: 200px;\n  background: linear-gradient(180deg, #001a4d 0%, #003d99 100%);\n  border-radius: 8px;\n  position: relative;\n  overflow: hidden;\n}\n\n.demo-stage .firefly {\n  position: absolute;\n  width: 8px;\n  height: 8px;\n  background: #ffc800;\n  border-radius: 50%;\n  animation: firefly-float 6s ease-in-out infinite, firefly-glow 1.5s ease-in-out infinite;\n}\n\n.demo-stage .firefly:nth-child(1) {\n  left: 50px;\n  top: 50px;\n  animation-delay: 0s, 0s;\n}\n\n.demo-stage .firefly:nth-child(2) {\n  left: 120px;\n  top: 80px;\n  animation-delay: 1s, 0.5s;\n}\n\n.demo-stage .firefly:nth-child(3) {\n  left: 80px;\n  top: 130px;\n  animation-delay: 2s, 1s;\n}",
+    "demo_html": "<div class=\"firefly\"></div>\n<div class=\"firefly\"></div>\n<div class=\"firefly\"></div>"
+  },
+  {
     "date": "2026-08-12",
     "theme": "波紋",
     "title": "波紋エフェクト",
