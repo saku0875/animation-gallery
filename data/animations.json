@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-08-17",
+    "theme": "満ち欠け",
+    "title": "月の満ち欠け",
+    "keyframes_css": "@keyframes moonPhase {\n  0% {\n    box-shadow: inset -20px 0 0 0 rgba(0, 0, 0, 1);\n  }\n  25% {\n    box-shadow: inset -10px 0 0 0 rgba(0, 0, 0, 1);\n  }\n  50% {\n    box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0);\n  }\n  75% {\n    box-shadow: inset 10px 0 0 0 rgba(0, 0, 0, 1);\n  }\n  100% {\n    box-shadow: inset -20px 0 0 0 rgba(0, 0, 0, 1);\n  }\n}\n\n.demo-stage {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 200px;\n  height: 200px;\n  background: #1a1a2e;\n}\n\n.demo-stage .moon {\n  width: 80px;\n  height: 80px;\n  background: #ffd700;\n  border-radius: 50%;\n  animation: moonPhase 8s infinite ease-in-out;\n}",
+    "demo_html": "<div class=\"moon\"></div>"
+  },
+  {
     "date": "2026-08-16",
     "theme": "静電気",
     "title": "静電気スパーク",
