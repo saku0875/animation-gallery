@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-08-18",
+    "theme": "コーヒーが冷める",
+    "title": "コーヒーが冷める",
+    "keyframes_css": "@keyframes steam-rise {\n  0% {\n    opacity: 1;\n    transform: translateY(0) scaleX(1);\n  }\n  100% {\n    opacity: 0;\n    transform: translateY(-40px) scaleX(0.6);\n  }\n}\n\n@keyframes cool-down {\n  0% {\n    background: linear-gradient(to bottom, #8B4513 0%, #A0522D 50%, #D2691E 100%);\n  }\n  50% {\n    background: linear-gradient(to bottom, #6B4423 0%, #8B6639 50%, #A67C52 100%);\n  }\n  100% {\n    background: linear-gradient(to bottom, #5C5C5C 0%, #6F6F6F 50%, #808080 100%);\n  }\n}\n\n@keyframes cup-warm {\n  0% {\n    box-shadow: inset 0 0 20px rgba(139, 69, 19, 0.5), 0 0 15px rgba(255, 140, 0, 0.4);\n  }\n  50% {\n    box-shadow: inset 0 0 15px rgba(139, 69, 19, 0.3), 0 0 8px rgba(255, 140, 0, 0.2);\n  }\n  100% {\n    box-shadow: inset 0 0 10px rgba(100, 100, 100, 0.2), 0 0 0px rgba(255, 140, 0, 0);\n  }\n}\n\n.demo-stage {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 200px;\n  height: 200px;\n  background: #f5f0e8;\n}\n\n.demo-stage .cup {\n  position: relative;\n  width: 80px;\n  height: 60px;\n  background: linear-gradient(to bottom, #8B4513 0%, #A0522D 50%, #D2691E 100%);\n  border-radius: 0 0 8px 8px;\n  box-shadow: inset 0 0 20px rgba(139, 69, 19, 0.5), 0 0 15px rgba(255, 140, 0, 0.4);\n  animation: cool-down 6s infinite, cup-warm 6s infinite;\n}\n\n.demo-stage .cup::before {\n  content: '';\n  position: absolute;\n  width: 90px;\n  height: 8px;\n  background: #8B6639;\n  border-radius: 50%;\n  top: -8px;\n  left: -5px;\n}\n\n.demo-stage .cup::after {\n  content: '';\n  position: absolute;\n  width: 20px;\n  height: 30px;\n  border: 3px solid #8B6639;\n  border-left: none;\n  border-radius: 0 15px 15px 0;\n  top: 10px;\n  right: -22px;\n}\n\n.demo-stage .steam {\n  position: absolute;\n  width: 12px;\n  height: 12px;\n  background: rgba(200, 200, 200, 0.6);\n  border-radius: 50%;\n  top: -25px;\n}\n\n.demo-stage .steam:nth-child(2) {\n  left: 20px;\n  animation: steam-rise 2s infinite;\n}\n\n.demo-stage .steam:nth-child(3) {\n  left: 40px;\n  animation: steam-rise 2s 0.5s infinite;\n}\n\n.demo-stage .steam:nth-child(4) {\n  left: 55px;\n  animation: steam-rise 2s 1s infinite;\n}",
+    "demo_html": "<div class=\"cup\">\n  <div class=\"steam\"></div>\n  <div class=\"steam\"></div>\n  <div class=\"steam\"></div>\n</div>"
+  },
+  {
     "date": "2026-08-17",
     "theme": "満ち欠け",
     "title": "月の満ち欠け",
