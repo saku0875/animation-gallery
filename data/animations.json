@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-08-22",
+    "theme": "回転寿司",
+    "title": "回転寿司",
+    "keyframes_css": "@keyframes rotate-sushi {\n  0% {\n    transform: rotateY(0deg);\n  }\n  100% {\n    transform: rotateY(360deg);\n  }\n}\n\n@keyframes move-belt {\n  0% {\n    transform: translateX(0);\n  }\n  100% {\n    transform: translateX(200px);\n  }\n}\n\n.demo-stage {\n  width: 200px;\n  height: 200px;\n  background: linear-gradient(180deg, #87ceeb 0%, #e0f6ff 100%);\n  overflow: hidden;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  position: relative;\n}\n\n.demo-stage::before {\n  content: '';\n  position: absolute;\n  width: 200px;\n  height: 30px;\n  background: repeating-linear-gradient(90deg, #333 0px, #333 20px, #555 20px, #555 40px);\n  bottom: 60px;\n  animation: move-belt 3s linear infinite;\n}\n\n.demo-stage::after {\n  content: '';\n  position: absolute;\n  width: 200px;\n  height: 30px;\n  background: repeating-linear-gradient(90deg, #333 0px, #333 20px, #555 20px, #555 40px);\n  top: 60px;\n  animation: move-belt 3s linear infinite reverse;\n}\n\n.sushi {\n  width: 40px;\n  height: 30px;\n  background: radial-gradient(ellipse at 30% 30%, #fff, #f5e6d3);\n  border-radius: 50%;\n  position: relative;\n  animation: rotate-sushi 2s linear infinite;\n  box-shadow: inset -2px -2px 5px rgba(0,0,0,0.2);\n}\n\n.sushi::before {\n  content: '';\n  position: absolute;\n  width: 100%;\n  height: 12px;\n  background: #2d5016;\n  top: 50%;\n  transform: translateY(-50%);\n  border-radius: 50%;\n}\n\n.sushi::after {\n  content: '';\n  position: absolute;\n  width: 8px;\n  height: 8px;\n  background: #ff69b4;\n  border-radius: 50%;\n  top: 20%;\n  left: 15%;\n}",
+    "demo_html": "<div class=\"sushi\"></div>"
+  },
+  {
     "date": "2026-08-21",
     "theme": "潮の満ち引き",
     "title": "潮の満ち引き",
