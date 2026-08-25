@@ -72,6 +72,5 @@ animation-gallery/
 
 作り方の詳細はQiitaに書いています。
 
-- [n8nをXserver VPSにセルフホストする(既存nginxと同居させる編)]([https://qiita.com/tsugumic5/](https://qiita.com/tsugumic5/items/271e88e203ca2291e86c)) 
-- [n8n + Claude APIで毎晩CSSアニメーションが増えていく標本箱サイトを作った]([https://qiita.com/tsugumic5/](https://qiita.com/saku0875/items/6a362e82bf2ce9ef0a08)) 
-
+- [n8nをXserver VPSにセルフホストする(既存nginxと同居させる編)](https://qiita.com/saku0875/items/271e88e203ca2291e86c)
+- [n8n + Claude APIで毎晩CSSアニメーションが増えていく標本箱サイトを作った](https://qiita.com/saku0875/items/6a362e82bf2ce9ef0a08)
