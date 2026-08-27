@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-08-27",
+    "theme": "振り子",
+    "title": "振り子",
+    "keyframes_css": "@keyframes swing {\n  0% {\n    transform: rotate(0deg);\n  }\n  25% {\n    transform: rotate(45deg);\n  }\n  50% {\n    transform: rotate(0deg);\n  }\n  75% {\n    transform: rotate(-45deg);\n  }\n  100% {\n    transform: rotate(0deg);\n  }\n}\n\n.demo-stage {\n  display: flex;\n  justify-content: center;\n  align-items: flex-start;\n  width: 200px;\n  height: 200px;\n  background: linear-gradient(180deg, #e3f2fd 0%, #fff 100%);\n}\n\n.demo-stage .pivot {\n  width: 12px;\n  height: 12px;\n  background: #333;\n  border-radius: 50%;\n  margin-top: 20px;\n  position: relative;\n  transform-origin: center;\n}\n\n.demo-stage .rod {\n  position: absolute;\n  width: 4px;\n  height: 60px;\n  background: #666;\n  left: 50%;\n  top: 50%;\n  transform: translateX(-50%) translateY(0);\n  transform-origin: 50% 0;\n  animation: swing 2s ease-in-out infinite;\n}\n\n.demo-stage .bob {\n  position: absolute;\n  width: 16px;\n  height: 16px;\n  background: #ff6b6b;\n  border-radius: 50%;\n  left: 50%;\n  top: 60px;\n  transform: translateX(-50%);\n  box-shadow: 0 4px 8px rgba(0,0,0,0.2);\n}",
+    "demo_html": "<div class=\"pivot\">\n  <div class=\"rod\">\n    <div class=\"bob\"></div>\n  </div>\n</div>"
+  },
+  {
     "date": "2026-08-26",
     "theme": "地層",
     "title": "地層アニメーション",
