@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-08-29",
+    "theme": "ネオン",
+    "title": "ネオンライト",
+    "keyframes_css": "@keyframes neon-flicker {\n  0% {\n    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00;\n    opacity: 1;\n  }\n  50% {\n    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00;\n    opacity: 0.8;\n  }\n  100% {\n    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00;\n    opacity: 1;\n  }\n}\n\n@keyframes neon-glow {\n  0%, 100% {\n    box-shadow: inset 0 0 10px #ff00ff, 0 0 10px #ff00ff;\n  }\n  50% {\n    box-shadow: inset 0 0 20px #ff00ff, 0 0 20px #ff00ff;\n  }\n}\n\n.demo-stage {\n  width: 200px;\n  height: 200px;\n  background: #0a0a0a;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column;\n  gap: 20px;\n}\n\n.demo-stage .neon-text {\n  font-size: 32px;\n  font-weight: bold;\n  color: #00ff00;\n  font-family: Arial, sans-serif;\n  animation: neon-flicker 3s infinite;\n  letter-spacing: 3px;\n}\n\n.demo-stage .neon-box {\n  width: 100px;\n  height: 50px;\n  border: 2px solid #ff00ff;\n  animation: neon-glow 2s infinite;\n}",
+    "demo_html": "<div class=\"neon-text\">NEON</div>\n<div class=\"neon-box\"></div>"
+  },
+  {
     "date": "2026-08-28",
     "theme": "雨",
     "title": "Falling Rain",
