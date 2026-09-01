@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-09-01",
+    "theme": "波紋",
+    "title": "波紋エフェクト",
+    "keyframes_css": "@keyframes ripple {\n  0% {\n    width: 0;\n    height: 0;\n    opacity: 1;\n  }\n  100% {\n    width: 200px;\n    height: 200px;\n    opacity: 0;\n  }\n}\n\n@keyframes pulse-center {\n  0% {\n    transform: scale(1);\n    opacity: 1;\n  }\n  100% {\n    transform: scale(1);\n    opacity: 1;\n  }\n}\n\n.demo-stage {\n  position: relative;\n  width: 200px;\n  height: 200px;\n  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);\n  border-radius: 50%;\n  overflow: hidden;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.demo-stage::before {\n  content: '';\n  position: absolute;\n  width: 40px;\n  height: 40px;\n  background: #4dd0e1;\n  border-radius: 50%;\n  animation: pulse-center 2s ease-in-out infinite;\n  z-index: 2;\n}\n\n.demo-stage .ripple {\n  position: absolute;\n  border: 2px solid #4dd0e1;\n  border-radius: 50%;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n}\n\n.demo-stage .ripple:nth-child(1) {\n  animation: ripple 1.5s ease-out infinite;\n  animation-delay: 0s;\n}\n\n.demo-stage .ripple:nth-child(2) {\n  animation: ripple 1.5s ease-out infinite;\n  animation-delay: 0.5s;\n}\n\n.demo-stage .ripple:nth-child(3) {\n  animation: ripple 1.5s ease-out infinite;\n  animation-delay: 1s;\n}",
+    "demo_html": "<div class=\"ripple\"></div>\n<div class=\"ripple\"></div>\n<div class=\"ripple\"></div>"
+  },
+  {
     "date": "2026-08-31",
     "theme": "重力",
     "title": "落下するボール - 重力表現",
