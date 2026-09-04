@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-09-04",
+    "theme": "醤油が広がる",
+    "title": "醤油が広がる",
+    "keyframes_css": "@keyframes spread {\n  0% {\n    width: 20px;\n    height: 20px;\n    opacity: 1;\n  }\n  100% {\n    width: 180px;\n    height: 180px;\n    opacity: 0;\n  }\n}\n\n@keyframes drip {\n  0% {\n    transform: translateY(0);\n    opacity: 1;\n  }\n  80% {\n    opacity: 1;\n  }\n  100% {\n    transform: translateY(60px);\n    opacity: 0;\n  }\n}\n\n.demo-stage {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 200px;\n  height: 200px;\n  background: #f5f1ed;\n  position: relative;\n  overflow: hidden;\n  border-radius: 8px;\n}\n\n.demo-stage .soy-drop {\n  position: absolute;\n  width: 12px;\n  height: 12px;\n  background: #2d2d2d;\n  border-radius: 50%;\n  top: 40px;\n  left: 50%;\n  transform: translateX(-50%);\n  animation: drip 2s ease-in infinite;\n}\n\n.demo-stage .soy-spread {\n  position: absolute;\n  width: 20px;\n  height: 20px;\n  background: #5d4e37;\n  border-radius: 50%;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  animation: spread 2s ease-out infinite;\n  pointer-events: none;\n}\n\n.demo-stage .soy-spread:nth-child(2) {\n  animation-delay: 0.5s;\n}\n\n.demo-stage .soy-spread:nth-child(3) {\n  animation-delay: 1s;\n}",
+    "demo_html": "<div class=\"soy-drop\"></div>\n<div class=\"soy-spread\"></div>\n<div class=\"soy-spread\"></div>\n<div class=\"soy-spread\"></div>"
+  },
+  {
     "date": "2026-09-03",
     "theme": "エレベーター",
     "title": "エレベーター",
