@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-09-10",
+    "theme": "潮の満ち引き",
+    "title": "潮の満ち引き",
+    "keyframes_css": "@keyframes wave {\n  0% {\n    transform: translateX(0) translateY(0);\n  }\n  25% {\n    transform: translateX(-30px) translateY(-15px);\n  }\n  50% {\n    transform: translateX(0) translateY(0);\n  }\n  75% {\n    transform: translateX(30px) translateY(15px);\n  }\n  100% {\n    transform: translateX(0) translateY(0);\n  }\n}\n\n@keyframes tide-in {\n  0% {\n    height: 40%;\n  }\n  50% {\n    height: 70%;\n  }\n  100% {\n    height: 40%;\n  }\n}\n\n.demo-stage {\n  width: 200px;\n  height: 200px;\n  background: linear-gradient(to bottom, #87ceeb 0%, #e0f6ff 100%);\n  position: relative;\n  overflow: hidden;\n  border-radius: 10px;\n}\n\n.demo-stage::before {\n  content: '';\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  width: 100%;\n  height: 40%;\n  background: linear-gradient(to bottom, #4da6ff 0%, #0066cc 100%);\n  animation: tide-in 4s ease-in-out infinite;\n}\n\n.demo-stage::after {\n  content: '';\n  position: absolute;\n  bottom: 20%;\n  left: 50%;\n  transform: translateX(-50%);\n  width: 80px;\n  height: 30px;\n  background: radial-gradient(ellipse at center, rgba(255,255,255,0.6) 0%, transparent 70%);\n  border-radius: 50%;\n  animation: wave 3s ease-in-out infinite;\n  mix-blend-mode: screen;\n}\n\n.demo-stage .moon {\n  position: absolute;\n  top: 20px;\n  right: 20px;\n  width: 40px;\n  height: 40px;\n  background: #ffffcc;\n  border-radius: 50%;\n  box-shadow: 0 0 20px rgba(255, 255, 200, 0.8);\n}\n\n.demo-stage .wave-line {\n  position: absolute;\n  bottom: 45%;\n  left: 0;\n  width: 100%;\n  height: 2px;\n  background: linear-gradient(to right, transparent, rgba(255,255,255,0.5), transparent);\n  animation: wave 3s ease-in-out infinite;\n}",
+    "demo_html": "<div class=\"moon\"></div>\n<div class=\"wave-line\"></div>"
+  },
+  {
     "date": "2026-09-09",
     "theme": "折り紙",
     "title": "折り紙アニメーション",
