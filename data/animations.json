@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-09-12",
+    "theme": "心電図",
+    "title": "心電図アニメーション",
+    "keyframes_css": "@keyframes heartbeat-wave {\n  0% {\n    stroke-dashoffset: 1000;\n  }\n  100% {\n    stroke-dashoffset: 0;\n  }\n}\n\n@keyframes pulse-dot {\n  0%, 100% {\n    r: 4;\n    fill: #ff6b6b;\n  }\n  50% {\n    r: 6;\n    fill: #ff4444;\n  }\n}\n\n.demo-stage {\n  width: 200px;\n  height: 200px;\n  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  border-radius: 8px;\n}\n\n.demo-stage svg {\n  width: 100%;\n  height: 100%;\n}\n\n.demo-stage .ecg-line {\n  fill: none;\n  stroke: #00ff41;\n  stroke-width: 2;\n  stroke-linecap: round;\n  stroke-linejoin: round;\n  stroke-dasharray: 1000;\n  animation: heartbeat-wave 2s linear infinite;\n  filter: drop-shadow(0 0 4px #00ff41);\n}\n\n.demo-stage .pulse-point {\n  animation: pulse-dot 1s ease-in-out infinite;\n}\n\n.demo-stage .grid {\n  stroke: #00ff4122;\n  stroke-width: 0.5;\n}",
+    "demo_html": "<svg viewBox=\"0 0 200 100\" preserveAspectRatio=\"xMidYMid meet\">\n  <defs>\n    <pattern id=\"grid\" width=\"10\" height=\"10\" patternUnits=\"userSpaceOnUse\">\n      <path class=\"grid\" d=\"M 10 0 L 0 0 0 10\" />\n    </pattern>\n  </defs>\n  <rect width=\"200\" height=\"100\" fill=\"url(#grid)\" />\n  <polyline class=\"ecg-line\" points=\"0,50 5,50 10,50 15,40 20,50 25,50 35,50 40,45 45,55 50,50 55,50 70,50 75,30 80,70 85,50 90,50 105,50 110,48 115,52 120,50 200,50\" />\n  <circle class=\"pulse-point\" cx=\"70\" cy=\"50\" r=\"4\" />\n</svg>"
+  },
+  {
     "date": "2026-09-11",
     "theme": "回転寿司",
     "title": "回転寿司",
