@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-09-23",
+    "theme": "エレベーター",
+    "title": "エレベーター",
+    "keyframes_css": "@keyframes elevator-up {\n  0% {\n    transform: translateY(60px);\n  }\n  25% {\n    transform: translateY(0);\n  }\n  50% {\n    transform: translateY(0);\n  }\n  75% {\n    transform: translateY(60px);\n  }\n  100% {\n    transform: translateY(60px);\n  }\n}\n\n@keyframes door-open {\n  0% {\n    transform: scaleX(1);\n  }\n  25% {\n    transform: scaleX(0);\n  }\n  50% {\n    transform: scaleX(0);\n  }\n  75% {\n    transform: scaleX(1);\n  }\n  100% {\n    transform: scaleX(1);\n  }\n}\n\n@keyframes indicator {\n  0% {\n    background: #999;\n  }\n  25% {\n    background: #FFD700;\n  }\n  50% {\n    background: #FFD700;\n  }\n  75% {\n    background: #999;\n  }\n  100% {\n    background: #999;\n  }\n}\n\n.demo-stage {\n  width: 200px;\n  height: 200px;\n  background: linear-gradient(to bottom, #f0f0f0, #e0e0e0);\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: flex-start;\n  padding: 10px;\n  box-sizing: border-box;\n  overflow: hidden;\n}\n\n.demo-stage .shaft {\n  width: 120px;\n  height: 140px;\n  border: 2px solid #333;\n  border-radius: 4px;\n  background: #fafafa;\n  position: relative;\n  overflow: hidden;\n}\n\n.demo-stage .car {\n  width: 100%;\n  height: 50px;\n  background: #c0c0c0;\n  border: 2px solid #666;\n  border-radius: 2px;\n  position: absolute;\n  animation: elevator-up 4s infinite;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.demo-stage .door-left,\n.demo-stage .door-right {\n  width: 48%;\n  height: 100%;\n  background: #808080;\n  position: absolute;\n  top: 0;\n  animation: door-open 4s infinite;\n  transform-origin: center;\n}\n\n.demo-stage .door-left {\n  left: 2%;\n}\n\n.demo-stage .door-right {\n  right: 2%;\n  transform: scaleX(-1);\n}\n\n.demo-stage .indicator {\n  position: absolute;\n  top: 8px;\n  right: 8px;\n  width: 12px;\n  height: 12px;\n  border-radius: 50%;\n  animation: indicator 4s infinite;\n}",
+    "demo_html": "<div class=\"shaft\">\n  <div class=\"car\">\n    <div class=\"door-left\"></div>\n    <div class=\"door-right\"></div>\n    <div class=\"indicator\"></div>\n  </div>\n</div>"
+  },
+  {
     "date": "2026-09-22",
     "theme": "点滅する蛍",
     "title": "点滅する蛍",
