@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-09-24",
+    "theme": "醤油が広がる",
+    "title": "醤油が広がる",
+    "keyframes_css": "@keyframes spread {\n  0% {\n    width: 10px;\n    height: 10px;\n    opacity: 1;\n  }\n  100% {\n    width: 180px;\n    height: 180px;\n    opacity: 0;\n  }\n}\n\n@keyframes drip {\n  0% {\n    transform: translateY(-20px);\n    opacity: 1;\n  }\n  20% {\n    opacity: 1;\n  }\n  100% {\n    transform: translateY(0);\n    opacity: 0;\n  }\n}\n\n.demo-stage {\n  width: 200px;\n  height: 200px;\n  background: #f5f5dc;\n  position: relative;\n  overflow: hidden;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.demo-stage .drop {\n  position: absolute;\n  top: 20px;\n  left: 50%;\n  width: 8px;\n  height: 12px;\n  background: #2c1810;\n  border-radius: 50% 50% 50% 0;\n  transform: translateX(-50%) rotate(-45deg);\n  animation: drip 3s infinite;\n}\n\n.demo-stage .spread {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  background: radial-gradient(circle, #1a0f08 0%, #3d2817 100%);\n  border-radius: 50%;\n  animation: spread 2.5s ease-out infinite;\n}\n\n.demo-stage .spread:nth-child(2) {\n  animation-delay: 1s;\n}\n",
+    "demo_html": "<div class=\"drop\"></div>\n<div class=\"spread\"></div>\n<div class=\"spread\"></div>"
+  },
+  {
     "date": "2026-09-23",
     "theme": "エレベーター",
     "title": "エレベーター",
