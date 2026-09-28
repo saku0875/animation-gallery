@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-09-28",
+    "theme": "signal",
+    "title": "Signal Pulse",
+    "keyframes_css": "@keyframes pulse-signal {\n  0% {\n    r: 5px;\n    opacity: 1;\n  }\n  100% {\n    r: 40px;\n    opacity: 0;\n  }\n}\n\n@keyframes blink-center {\n  0%, 100% {\n    fill: #ff3333;\n  }\n  50% {\n    fill: #ffaa00;\n  }\n}\n\n.demo-stage {\n  width: 200px;\n  height: 200px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  background: #0a0a0a;\n}\n\n.demo-stage svg {\n  width: 160px;\n  height: 160px;\n}\n\n.demo-stage circle.pulse {\n  animation: pulse-signal 1.5s ease-out infinite;\n  fill: none;\n  stroke: #ff3333;\n  stroke-width: 2;\n}\n\n.demo-stage circle.pulse:nth-child(2) {\n  animation-delay: 0.5s;\n}\n\n.demo-stage circle.pulse:nth-child(3) {\n  animation-delay: 1s;\n}\n\n.demo-stage circle.center {\n  animation: blink-center 0.6s ease-in-out infinite;\n  fill: #ff3333;\n}",
+    "demo_html": "<svg viewBox=\"0 0 100 100\">\n  <circle class=\"pulse\" cx=\"50\" cy=\"50\"></circle>\n  <circle class=\"pulse\" cx=\"50\" cy=\"50\"></circle>\n  <circle class=\"pulse\" cx=\"50\" cy=\"50\"></circle>\n  <circle class=\"center\" cx=\"50\" cy=\"50\" r=\"5\"></circle>\n</svg>"
+  },
+  {
     "date": "2026-09-27",
     "theme": "コーヒーが冷める",
     "title": "コーヒーが冷める",
