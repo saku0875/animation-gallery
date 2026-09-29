@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-09-29",
+    "theme": "折り紙",
+    "title": "折り紙アニメーション",
+    "keyframes_css": "@keyframes fold {\n  0% {\n    transform: rotateX(0deg) rotateY(0deg);\n  }\n  25% {\n    transform: rotateX(45deg) rotateY(0deg);\n  }\n  50% {\n    transform: rotateX(90deg) rotateY(45deg);\n  }\n  75% {\n    transform: rotateX(45deg) rotateY(90deg);\n  }\n  100% {\n    transform: rotateX(0deg) rotateY(0deg);\n  }\n}\n\n@keyframes shimmer {\n  0%, 100% {\n    opacity: 1;\n  }\n  50% {\n    opacity: 0.7;\n  }\n}\n\n.demo-stage {\n  width: 200px;\n  height: 200px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);\n  perspective: 1000px;\n}\n\n.demo-stage .origami {\n  width: 100px;\n  height: 100px;\n  background: linear-gradient(135deg, #ff6b6b 0%, #ffd93d 50%, #6bcf7f 100%);\n  animation: fold 3s infinite ease-in-out, shimmer 3s infinite ease-in-out;\n  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);\n}",
+    "demo_html": "<div class=\"origami\"></div>"
+  },
+  {
     "date": "2026-09-28",
     "theme": "signal",
     "title": "Signal Pulse",
