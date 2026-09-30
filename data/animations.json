@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-09-30",
+    "theme": "潮の満ち引き",
+    "title": "潮の満ち引き",
+    "keyframes_css": "@keyframes wave {\n  0% {\n    transform: translateX(0) translateY(0);\n  }\n  50% {\n    transform: translateX(20px) translateY(-10px);\n  }\n  100% {\n    transform: translateX(0) translateY(0);\n  }\n}\n\n@keyframes tide-in {\n  0% {\n    height: 40%;\n    opacity: 0.6;\n  }\n  50% {\n    height: 70%;\n    opacity: 0.8;\n  }\n  100% {\n    height: 40%;\n    opacity: 0.6;\n  }\n}\n\n@keyframes moon-glow {\n  0%, 100% {\n    opacity: 0.4;\n  }\n  50% {\n    opacity: 1;\n  }\n}\n\n.demo-stage {\n  width: 200px;\n  height: 200px;\n  background: linear-gradient(180deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);\n  position: relative;\n  overflow: hidden;\n  border-radius: 8px;\n}\n\n.demo-stage .moon {\n  position: absolute;\n  width: 40px;\n  height: 40px;\n  background: #ffd700;\n  border-radius: 50%;\n  top: 20px;\n  right: 20px;\n  animation: moon-glow 4s ease-in-out infinite;\n  box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);\n}\n\n.demo-stage .water {\n  position: absolute;\n  bottom: 0;\n  width: 100%;\n  background: linear-gradient(180deg, #0a6b8f 0%, #06495a 100%);\n  animation: tide-in 3s ease-in-out infinite;\n}\n\n.demo-stage .wave {\n  position: absolute;\n  bottom: 35%;\n  width: 100%;\n  height: 20px;\n  background: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 20\"><path d=\"M0,10 Q25,5 50,10 T100,10 T150,10 T200,10\" stroke=\"%23148fa8\" stroke-width=\"2\" fill=\"none\" opacity=\"0.7\"/></svg>');\n  background-size: 100px 20px;\n  animation: wave 2s linear infinite;\n}\n\n.demo-stage .wave:nth-child(3) {\n  bottom: 45%;\n  opacity: 0.5;\n  animation: wave 3s linear infinite reverse;\n}",
+    "demo_html": "<div class=\"moon\"></div>\n<div class=\"wave\"></div>\n<div class=\"wave\"></div>\n<div class=\"water\"></div>"
+  },
+  {
     "date": "2026-09-29",
     "theme": "折り紙",
     "title": "折り紙アニメーション",
