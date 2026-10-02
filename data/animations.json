@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-10-02",
+    "theme": "心電図",
+    "title": "心電図アニメーション",
+    "keyframes_css": "@keyframes heartbeat-line {\n  0% { stroke-dashoffset: 1000; }\n  50% { stroke-dashoffset: 0; }\n  100% { stroke-dashoffset: 1000; }\n}\n\n@keyframes pulse-dot {\n  0%, 100% { r: 3; fill: #ff4444; }\n  50% { r: 5; fill: #ff6666; }\n}\n\n.demo-stage {\n  width: 200px;\n  height: 200px;\n  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  border-radius: 8px;\n  overflow: hidden;\n}\n\n.demo-stage svg {\n  width: 100%;\n  height: 100%;\n}\n\n.demo-stage .ecg-line {\n  stroke: #00ff88;\n  stroke-width: 2;\n  fill: none;\n  stroke-linecap: round;\n  stroke-dasharray: 1000;\n  animation: heartbeat-line 2s ease-in-out infinite;\n}\n\n.demo-stage .pulse-dot {\n  animation: pulse-dot 2s ease-in-out infinite;\n}",
+    "demo_html": "<svg viewBox=\"0 0 200 100\" preserveAspectRatio=\"xMidYMid meet\">\n  <polyline class=\"ecg-line\" points=\"0,50 10,50 15,35 20,65 25,50 35,50 40,50 45,40 50,60 55,50 70,50 75,25 80,75 85,50 95,50 100,50 105,45 110,55 115,50 130,50 135,45 140,55 145,50 160,50 170,50 180,50 190,50 200,50\" />\n  <circle class=\"pulse-dot\" cx=\"10\" cy=\"50\" r=\"3\" />\n</svg>"
+  },
+  {
     "date": "2026-10-01",
     "theme": "回転寿司",
     "title": "回転寿司",
