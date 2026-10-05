@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-10-05",
+    "theme": "地層",
+    "title": "地層堆積アニメーション",
+    "keyframes_css": "@keyframes settle {\n  0% {\n    transform: translateY(-200px);\n    opacity: 0;\n  }\n  10% {\n    opacity: 1;\n  }\n  90% {\n    opacity: 1;\n  }\n  100% {\n    transform: translateY(0);\n    opacity: 1;\n  }\n}\n\n@keyframes shimmer {\n  0%, 100% {\n    background-position: 0% 50%;\n  }\n  50% {\n    background-position: 100% 50%;\n  }\n}\n\n.demo-stage {\n  width: 200px;\n  height: 200px;\n  background: linear-gradient(to bottom, #87CEEB 0%, #E0F6FF 100%);\n  border: 2px solid #333;\n  position: relative;\n  overflow: hidden;\n}\n\n.demo-stage .layer {\n  position: absolute;\n  width: 100%;\n  height: 40px;\n  left: 0;\n  animation: settle 8s ease-in infinite;\n}\n\n.demo-stage .layer:nth-child(1) {\n  background: linear-gradient(90deg, #8B7355, #A0826D, #8B7355);\n  background-size: 200% 100%;\n  animation: settle 8s ease-in infinite, shimmer 3s ease-in-out infinite;\n  animation-delay: 0s, 0s;\n  top: 160px;\n}\n\n.demo-stage .layer:nth-child(2) {\n  background: linear-gradient(90deg, #CD853F, #DDA15E, #CD853F);\n  background-size: 200% 100%;\n  animation: settle 8s ease-in infinite, shimmer 3s ease-in-out infinite;\n  animation-delay: 2s, 2s;\n  top: 120px;\n}\n\n.demo-stage .layer:nth-child(3) {\n  background: linear-gradient(90deg, #D2B48C, #E8D5C4, #D2B48C);\n  background-size: 200% 100%;\n  animation: settle 8s ease-in infinite, shimmer 3s ease-in-out infinite;\n  animation-delay: 4s, 4s;\n  top: 80px;\n}\n\n.demo-stage .layer:nth-child(4) {\n  background: linear-gradient(90deg, #A9927D, #C9B8A3, #A9927D);\n  background-size: 200% 100%;\n  animation: settle 8s ease-in infinite, shimmer 3s ease-in-out infinite;\n  animation-delay: 6s, 6s;\n  top: 40px;\n}",
+    "demo_html": "<div class=\"layer\"></div>\n<div class=\"layer\"></div>\n<div class=\"layer\"></div>\n<div class=\"layer\"></div>"
+  },
+  {
     "date": "2026-10-04",
     "theme": "花火",
     "title": "花火",
