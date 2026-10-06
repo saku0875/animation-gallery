@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-10-06",
+    "theme": "振り子",
+    "title": "Swinging Pendulum",
+    "keyframes_css": "@keyframes swing {\n  0% {\n    transform: rotate(0deg);\n  }\n  25% {\n    transform: rotate(45deg);\n  }\n  50% {\n    transform: rotate(0deg);\n  }\n  75% {\n    transform: rotate(-45deg);\n  }\n  100% {\n    transform: rotate(0deg);\n  }\n}\n\n.demo-stage {\n  width: 200px;\n  height: 200px;\n  display: flex;\n  align-items: flex-start;\n  justify-content: center;\n  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);\n}\n\n.demo-stage .pivot {\n  width: 12px;\n  height: 12px;\n  background: #fff;\n  border-radius: 50%;\n  margin-top: 10px;\n  transform-origin: center;\n}\n\n.demo-stage .pendulum-container {\n  transform-origin: 50% 0;\n  animation: swing 2s ease-in-out infinite;\n}\n\n.demo-stage .rod {\n  width: 2px;\n  height: 80px;\n  background: #fff;\n  margin: 0 auto;\n}\n\n.demo-stage .bob {\n  width: 20px;\n  height: 20px;\n  background: radial-gradient(circle at 30% 30%, #ffeb3b, #ff6f00);\n  border-radius: 50%;\n  margin: 0 auto;\n  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);\n}",
+    "demo_html": "<div class=\"pivot\"></div>\n<div class=\"pendulum-container\">\n  <div class=\"rod\"></div>\n  <div class=\"bob\"></div>\n</div>"
+  },
+  {
     "date": "2026-10-05",
     "theme": "地層",
     "title": "地層堆積アニメーション",
