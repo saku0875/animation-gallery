@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-10-07",
+    "theme": "雨",
+    "title": "雨の降下アニメーション",
+    "keyframes_css": "@keyframes fall {\n  0% {\n    transform: translateY(-10px);\n    opacity: 1;\n  }\n  90% {\n    opacity: 1;\n  }\n  100% {\n    transform: translateY(200px);\n    opacity: 0;\n  }\n}\n\n@keyframes sway {\n  0%, 100% {\n    transform: translateX(0);\n  }\n  50% {\n    transform: translateX(8px);\n  }\n}\n\n.demo-stage {\n  width: 200px;\n  height: 200px;\n  background: linear-gradient(180deg, #87ceeb 0%, #e0f6ff 100%);\n  border-radius: 8px;\n  overflow: hidden;\n  position: relative;\n}\n\n.demo-stage::before,\n.demo-stage::after {\n  content: '';\n  position: absolute;\n  left: 10px;\n  width: 2px;\n  height: 8px;\n  background: #4da6ff;\n  opacity: 0.7;\n  animation: fall 1.2s linear infinite;\n}\n\n.demo-stage::after {\n  left: 40px;\n  animation: fall 1.2s linear 0.2s infinite;\n}\n\n.drop-1 {\n  position: absolute;\n  left: 70px;\n  width: 2px;\n  height: 8px;\n  background: #4da6ff;\n  opacity: 0.7;\n  animation: fall 1.2s linear 0.4s infinite;\n}\n\n.drop-2 {\n  position: absolute;\n  left: 100px;\n  width: 2px;\n  height: 8px;\n  background: #4da6ff;\n  opacity: 0.7;\n  animation: fall 1.2s linear 0.6s infinite;\n}\n\n.drop-3 {\n  position: absolute;\n  left: 130px;\n  width: 2px;\n  height: 8px;\n  background: #4da6ff;\n  opacity: 0.7;\n  animation: fall 1.2s linear 0.8s infinite;\n}\n\n.drop-4 {\n  position: absolute;\n  left: 160px;\n  width: 2px;\n  height: 8px;\n  background: #4da6ff;\n  opacity: 0.7;\n  animation: fall 1.2s linear 1s infinite;\n}",
+    "demo_html": "<div class=\"drop-1\"></div>\n<div class=\"drop-2\"></div>\n<div class=\"drop-3\"></div>\n<div class=\"drop-4\"></div>"
+  },
+  {
     "date": "2026-10-06",
     "theme": "振り子",
     "title": "Swinging Pendulum",
