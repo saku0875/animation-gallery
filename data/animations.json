@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-10-08",
+    "theme": "ネオン",
+    "title": "ネオン光るテキスト",
+    "keyframes_css": "@keyframes neon-glow {\n  0%, 100% {\n    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;\n  }\n  50% {\n    text-shadow: 0 0 20px #00ff00, 0 0 40px #00ff00, 0 0 60px #00ff00, 0 0 80px #00ff00;\n  }\n}\n\n@keyframes color-shift {\n  0% {\n    color: #00ff00;\n  }\n  33% {\n    color: #ff00ff;\n  }\n  66% {\n    color: #00ffff;\n  }\n  100% {\n    color: #00ff00;\n  }\n}\n\n.demo-stage {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 200px;\n  height: 200px;\n  background: #000;\n}\n\n.demo-stage .neon-text {\n  font-size: 48px;\n  font-weight: bold;\n  letter-spacing: 4px;\n  animation: neon-glow 2s ease-in-out infinite, color-shift 6s ease-in-out infinite;\n  font-family: 'Arial', sans-serif;\n}\n",
+    "demo_html": "<div class=\"neon-text\">NEON</div>"
+  },
+  {
     "date": "2026-10-07",
     "theme": "雨",
     "title": "雨の降下アニメーション",
