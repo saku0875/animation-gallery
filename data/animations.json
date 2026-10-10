@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-10-10",
+    "theme": "重力",
+    "title": "Gravity Ball Drop",
+    "keyframes_css": "@keyframes fall {\n  0% {\n    transform: translateY(-80px);\n    opacity: 1;\n  }\n  85% {\n    transform: translateY(80px);\n    opacity: 1;\n  }\n  100% {\n    transform: translateY(80px);\n    opacity: 1;\n  }\n}\n\n@keyframes bounce {\n  0%, 10%, 20% {\n    transform: scaleY(1);\n  }\n  5% {\n    transform: scaleY(0.8);\n  }\n  15% {\n    transform: scaleY(0.9);\n  }\n}\n\n.demo-stage {\n  width: 200px;\n  height: 200px;\n  background: linear-gradient(180deg, #e8f4f8 0%, #b0e0e6 100%);\n  position: relative;\n  overflow: hidden;\n  border-radius: 8px;\n}\n\n.demo-stage::before {\n  content: '';\n  position: absolute;\n  bottom: 20px;\n  left: 50%;\n  width: 120px;\n  height: 4px;\n  background: #8b7355;\n  transform: translateX(-50%);\n  border-radius: 2px;\n}\n\n.demo-stage .ball {\n  width: 30px;\n  height: 30px;\n  background: radial-gradient(circle at 30% 30%, #ff6b6b, #c92a2a);\n  border-radius: 50%;\n  position: absolute;\n  left: 50%;\n  top: 20px;\n  transform: translateX(-50%);\n  animation: fall 1.5s ease-in infinite, bounce 1.5s ease-out infinite;\n  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);\n}\n",
+    "demo_html": "<div class=\"ball\"></div>"
+  },
+  {
     "date": "2026-10-09",
     "theme": "呼吸",
     "title": "呼吸する球体",
