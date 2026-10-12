@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-10-12",
+    "theme": "点滅する蛍",
+    "title": "点滅する蛍",
+    "keyframes_css": "@keyframes flicker {\n  0%, 10%, 15%, 20%, 100% {\n    opacity: 0;\n    filter: drop-shadow(0 0 0px rgba(255, 200, 0, 0));\n  }\n  5% {\n    opacity: 1;\n    filter: drop-shadow(0 0 8px rgba(255, 200, 0, 0.8));\n  }\n  12% {\n    opacity: 0.7;\n    filter: drop-shadow(0 0 6px rgba(255, 200, 0, 0.6));\n  }\n  25%, 40%, 50%, 65%, 75%, 85% {\n    opacity: 1;\n    filter: drop-shadow(0 0 10px rgba(255, 200, 0, 0.9));\n  }\n  30%, 45%, 55%, 70%, 80%, 90% {\n    opacity: 0;\n    filter: drop-shadow(0 0 0px rgba(255, 200, 0, 0));\n  }\n}\n\n@keyframes float {\n  0%, 100% {\n    transform: translate(0, 0);\n  }\n  25% {\n    transform: translate(15px, -20px);\n  }\n  50% {\n    transform: translate(5px, 10px);\n  }\n  75% {\n    transform: translate(-10px, -15px);\n  }\n}\n\n.demo-stage {\n  width: 200px;\n  height: 200px;\n  background: linear-gradient(180deg, #1a1a3e 0%, #0f0f2e 100%);\n  position: relative;\n  overflow: hidden;\n  border-radius: 4px;\n}\n\n.demo-stage .firefly {\n  position: absolute;\n  width: 8px;\n  height: 8px;\n  background: radial-gradient(circle, #ffc800, #ff9500);\n  border-radius: 50%;\n  top: 100px;\n  left: 100px;\n  animation: flicker 3s infinite, float 4s infinite;\n  box-shadow: 0 0 10px rgba(255, 200, 0, 0.8);\n}",
+    "demo_html": "<div class=\"firefly\"></div>"
+  },
+  {
     "date": "2026-10-11",
     "theme": "波紋",
     "title": "波紋エフェクト",
