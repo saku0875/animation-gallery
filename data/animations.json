@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-10-19",
+    "theme": "折り紙",
+    "title": "折り紙の折り畳みアニメーション",
+    "keyframes_css": "@keyframes fold-in {\n  0% {\n    transform: rotateX(0deg) rotateY(0deg);\n    opacity: 1;\n  }\n  50% {\n    transform: rotateX(180deg) rotateY(0deg);\n    opacity: 0.7;\n  }\n  100% {\n    transform: rotateX(360deg) rotateY(360deg);\n    opacity: 1;\n  }\n}\n\n@keyframes float-rotate {\n  0% {\n    transform: translateY(0px) rotateZ(0deg);\n  }\n  50% {\n    transform: translateY(-20px) rotateZ(15deg);\n  }\n  100% {\n    transform: translateY(0px) rotateZ(0deg);\n  }\n}\n\n.demo-stage {\n  width: 200px;\n  height: 200px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  background: linear-gradient(135deg, #fff9e6 0%, #ffe6f0 100%);\n  perspective: 1000px;\n}\n\n.demo-stage .origami {\n  width: 80px;\n  height: 80px;\n  background: linear-gradient(135deg, #ff6b9d 0%, #c44569 100%);\n  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 50% 85%, 18% 100%, 0% 38%);\n  animation: fold-in 3s ease-in-out infinite, float-rotate 4s ease-in-out infinite;\n  box-shadow: 0 8px 16px rgba(0,0,0,0.2);\n}",
+    "demo_html": "<div class=\"origami\"></div>"
+  },
+  {
     "date": "2026-10-18",
     "theme": "signal",
     "title": "Signal Pulse",
