@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-10-20",
+    "theme": "潮の満ち引き",
+    "title": "潮の満ち引き",
+    "keyframes_css": "@keyframes tide-rise {\n  0%, 100% { transform: translateY(0); }\n  50% { transform: translateY(-30px); }\n}\n\n@keyframes tide-fall {\n  0%, 100% { transform: translateY(0); }\n  50% { transform: translateY(30px); }\n}\n\n@keyframes wave {\n  0%, 100% { d: path('M0,60 Q50,40 100,60 T200,60 L200,120 L0,120 Z'); }\n  25% { d: path('M0,50 Q50,30 100,50 T200,50 L200,120 L0,120 Z'); }\n  50% { d: path('M0,70 Q50,50 100,70 T200,70 L200,120 L0,120 Z'); }\n  75% { d: path('M0,50 Q50,30 100,50 T200,50 L200,120 L0,120 Z'); }\n}\n\n.demo-stage {\n  width: 200px;\n  height: 200px;\n  background: linear-gradient(to bottom, #87CEEB 0%, #E0F6FF 100%);\n  border-radius: 8px;\n  overflow: hidden;\n  position: relative;\n}\n\n.demo-stage .moon {\n  position: absolute;\n  width: 40px;\n  height: 40px;\n  background: #FFF8DC;\n  border-radius: 50%;\n  top: 20px;\n  right: 20px;\n  box-shadow: 0 0 15px rgba(255, 248, 220, 0.6);\n}\n\n.demo-stage .water {\n  position: absolute;\n  width: 200px;\n  height: 80px;\n  bottom: 0;\n  animation: tide-rise 4s ease-in-out infinite;\n}\n\n.demo-stage svg {\n  width: 100%;\n  height: 100%;\n}\n\n.demo-stage path {\n  fill: #4DA6FF;\n  animation: wave 4s ease-in-out infinite;\n}\n\n.demo-stage .sand {\n  position: absolute;\n  width: 100%;\n  height: 40px;\n  bottom: 0;\n  background: #F4A460;\n  z-index: -1;\n}",
+    "demo_html": "<div class=\"moon\"></div>\n<div class=\"water\">\n  <svg viewBox=\"0 0 200 120\" preserveAspectRatio=\"none\">\n    <path></path>\n  </svg>\n</div>\n<div class=\"sand\"></div>"
+  },
+  {
     "date": "2026-10-19",
     "theme": "折り紙",
     "title": "折り紙の折り畳みアニメーション",
