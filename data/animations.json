@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-10-22",
+    "theme": "心電図",
+    "title": "心電図",
+    "keyframes_css": "@keyframes heartbeat {\n  0% {\n    stroke-dashoffset: 0;\n  }\n  100% {\n    stroke-dashoffset: -200;\n  }\n}\n\n@keyframes pulse {\n  0%, 100% {\n    r: 4;\n    fill-opacity: 0.8;\n  }\n  50% {\n    r: 6;\n    fill-opacity: 0.3;\n  }\n}\n\n.demo-stage {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 200px;\n  height: 200px;\n  background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);\n}\n\n.demo-stage svg {\n  width: 180px;\n  height: 100px;\n}\n\n.demo-stage .heartline {\n  stroke: #00ff88;\n  stroke-width: 2;\n  fill: none;\n  stroke-dasharray: 200;\n  animation: heartbeat 1.5s linear infinite;\n  filter: drop-shadow(0 0 3px #00ff88);\n}\n\n.demo-stage .heart-dot {\n  fill: #ff1744;\n  animation: pulse 1.5s ease-in-out infinite;\n  filter: drop-shadow(0 0 4px #ff1744);\n}",
+    "demo_html": "<svg viewBox=\"0 0 200 60\" preserveAspectRatio=\"xMidYMid meet\">\n  <path class=\"heartline\" d=\"M 10 30 L 30 30 L 35 10 L 40 30 L 50 30 L 80 30 L 100 50 L 120 10 L 140 30 L 160 30 L 190 30\"/>\n  <circle class=\"heart-dot\" cx=\"100\" cy=\"50\" r=\"4\"/>\n</svg>"
+  },
+  {
     "date": "2026-10-21",
     "theme": "回転寿司",
     "title": "回転寿司",
