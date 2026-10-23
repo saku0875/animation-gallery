@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-10-23",
+    "theme": "ドミノ倒し",
+    "title": "ドミノ倒し",
+    "keyframes_css": "@keyframes fall {\n  0% {\n    transform: rotateZ(0deg);\n    transform-origin: bottom center;\n  }\n  50% {\n    transform: rotateZ(90deg);\n    transform-origin: bottom center;\n  }\n  100% {\n    transform: rotateZ(90deg);\n    transform-origin: bottom center;\n  }\n}\n\n@keyframes reset {\n  0% {\n    transform: rotateZ(90deg);\n    transform-origin: bottom center;\n  }\n  50% {\n    transform: rotateZ(90deg);\n    transform-origin: bottom center;\n  }\n  100% {\n    transform: rotateZ(0deg);\n    transform-origin: bottom center;\n  }\n}\n\n.demo-stage {\n  width: 200px;\n  height: 200px;\n  display: flex;\n  align-items: flex-end;\n  justify-content: center;\n  gap: 8px;\n  background: linear-gradient(180deg, #87ceeb 0%, #e0f6ff 100%);\n  border-radius: 8px;\n  overflow: hidden;\n}\n\n.demo-stage .domino {\n  width: 12px;\n  height: 60px;\n  background: linear-gradient(90deg, #ff6b6b 0%, #ff8787 50%, #ff6b6b 100%);\n  border-radius: 2px;\n  transform-origin: bottom center;\n}\n\n.demo-stage .domino:nth-child(1) {\n  animation: fall 0.6s ease-in-out 0s infinite;\n}\n\n.demo-stage .domino:nth-child(2) {\n  animation: fall 0.6s ease-in-out 0.1s infinite;\n}\n\n.demo-stage .domino:nth-child(3) {\n  animation: fall 0.6s ease-in-out 0.2s infinite;\n}\n\n.demo-stage .domino:nth-child(4) {\n  animation: fall 0.6s ease-in-out 0.3s infinite;\n}\n\n.demo-stage .domino:nth-child(5) {\n  animation: fall 0.6s ease-in-out 0.4s infinite;\n}",
+    "demo_html": "<div class=\"domino\"></div>\n<div class=\"domino\"></div>\n<div class=\"domino\"></div>\n<div class=\"domino\"></div>\n<div class=\"domino\"></div>"
+  },
+  {
     "date": "2026-10-22",
     "theme": "心電図",
     "title": "心電図",
