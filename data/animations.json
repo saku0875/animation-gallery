@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-10-24",
+    "theme": "花火",
+    "title": "花火",
+    "keyframes_css": "@keyframes burst {\n  0% {\n    transform: translate(0, 0) scale(1);\n    opacity: 1;\n  }\n  100% {\n    transform: translate(var(--tx), var(--ty)) scale(0);\n    opacity: 0;\n  }\n}\n\n@keyframes spark {\n  0% {\n    transform: translate(0, 0);\n    opacity: 1;\n  }\n  100% {\n    transform: translate(var(--tx), var(--ty));\n    opacity: 0;\n  }\n}\n\n.demo-stage {\n  position: relative;\n  width: 200px;\n  height: 200px;\n  background: radial-gradient(circle, #001a4d 0%, #000 100%);\n  overflow: hidden;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.demo-stage::before,\n.demo-stage::after {\n  content: '';\n  position: absolute;\n  width: 4px;\n  height: 4px;\n  background: #ffdd00;\n  border-radius: 50%;\n  box-shadow: 0 0 6px #ffdd00;\n}\n\n.demo-stage::before {\n  top: 50%;\n  left: 50%;\n  animation: burst 1s ease-out infinite;\n  --tx: 60px;\n  --ty: -60px;\n}\n\n.demo-stage::after {\n  top: 50%;\n  left: 50%;\n  animation: burst 1s ease-out infinite 0.3s;\n  --tx: -70px;\n  --ty: 50px;\n}\n\n.demo-stage .spark1 {\n  position: absolute;\n  width: 3px;\n  height: 3px;\n  background: #ff6b9d;\n  border-radius: 50%;\n  box-shadow: 0 0 4px #ff6b9d;\n  top: 50%;\n  left: 50%;\n  animation: spark 1.2s ease-out infinite;\n  --tx: 50px;\n  --ty: 50px;\n}\n\n.demo-stage .spark2 {\n  position: absolute;\n  width: 3px;\n  height: 3px;\n  background: #00ff88;\n  border-radius: 50%;\n  box-shadow: 0 0 4px #00ff88;\n  top: 50%;\n  left: 50%;\n  animation: spark 1.2s ease-out infinite 0.4s;\n  --tx: -60px;\n  --ty: 40px;\n}\n\n.demo-stage .spark3 {\n  position: absolute;\n  width: 3px;\n  height: 3px;\n  background: #ff00ff;\n  border-radius: 50%;\n  box-shadow: 0 0 4px #ff00ff;\n  top: 50%;\n  left: 50%;\n  animation: spark 1.2s ease-out infinite 0.2s;\n  --tx: 40px;\n  --ty: -50px;\n}\n\n.demo-stage .spark4 {\n  position: absolute;\n  width: 3px;\n  height: 3px;\n  background: #00ffff;\n  border-radius: 50%;\n  box-shadow: 0 0 4px #00ffff;\n  top: 50%;\n  left: 50%;\n  animation: spark 1.2s ease-out infinite 0.6s;\n  --tx: -45px;\n  --ty: -55px;\n}",
+    "demo_html": "<div class=\"spark1\"></div><div class=\"spark2\"></div><div class=\"spark3\"></div><div class=\"spark4\"></div>"
+  },
+  {
     "date": "2026-10-23",
     "theme": "ドミノ倒し",
     "title": "ドミノ倒し",
