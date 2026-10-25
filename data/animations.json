@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-10-25",
+    "theme": "地層",
+    "title": "地層の堆積",
+    "keyframes_css": "@keyframes sediment1 {\n  0% { transform: translateY(-200px); opacity: 0; }\n  10% { opacity: 1; }\n  90% { opacity: 1; }\n  100% { transform: translateY(0); opacity: 0; }\n}\n\n@keyframes sediment2 {\n  0% { transform: translateY(-200px); opacity: 0; }\n  25% { opacity: 1; }\n  75% { opacity: 1; }\n  100% { transform: translateY(0); opacity: 0; }\n}\n\n@keyframes sediment3 {\n  0% { transform: translateY(-200px); opacity: 0; }\n  40% { opacity: 1; }\n  60% { opacity: 1; }\n  100% { transform: translateY(0); opacity: 0; }\n}\n\n.demo-stage {\n  width: 200px;\n  height: 200px;\n  background: linear-gradient(180deg, #87ceeb 0%, #e8f4f8 100%);\n  position: relative;\n  overflow: hidden;\n  border: 1px solid #999;\n}\n\n.demo-stage .layer {\n  position: absolute;\n  width: 100%;\n  height: 40px;\n  left: 0;\n}\n\n.demo-stage .layer1 {\n  background: linear-gradient(180deg, #d4a574 0%, #c19a6b 100%);\n  animation: sediment1 3s infinite;\n  top: 160px;\n}\n\n.demo-stage .layer2 {\n  background: linear-gradient(180deg, #8b7355 0%, #6b5344 100%);\n  animation: sediment2 3s infinite;\n  top: 120px;\n}\n\n.demo-stage .layer3 {\n  background: linear-gradient(180deg, #a0826d 0%, #7a6b5d 100%);\n  animation: sediment3 3s infinite;\n  top: 80px;\n}\n\n.demo-stage .bedrock {\n  position: absolute;\n  width: 100%;\n  height: 80px;\n  bottom: 0;\n  background: linear-gradient(180deg, #696969 0%, #404040 100%);\n}\n",
+    "demo_html": "<div class=\"layer layer1\"></div>\n<div class=\"layer layer2\"></div>\n<div class=\"layer layer3\"></div>\n<div class=\"bedrock\"></div>"
+  },
+  {
     "date": "2026-10-24",
     "theme": "花火",
     "title": "花火",
