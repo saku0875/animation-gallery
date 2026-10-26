@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-10-26",
+    "theme": "振り子",
+    "title": "振り子のアニメーション",
+    "keyframes_css": "@keyframes swing {\n  0% {\n    transform: rotate(0deg);\n  }\n  25% {\n    transform: rotate(45deg);\n  }\n  50% {\n    transform: rotate(0deg);\n  }\n  75% {\n    transform: rotate(-45deg);\n  }\n  100% {\n    transform: rotate(0deg);\n  }\n}\n\n.demo-stage {\n  width: 200px;\n  height: 200px;\n  display: flex;\n  justify-content: center;\n  align-items: flex-start;\n  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);\n}\n\n.demo-stage::before {\n  content: '';\n  position: absolute;\n  width: 8px;\n  height: 8px;\n  background: #fff;\n  border-radius: 50%;\n  top: 20px;\n  z-index: 10;\n}\n\n.demo-stage .pendulum {\n  width: 3px;\n  height: 100px;\n  background: #fff;\n  transform-origin: top center;\n  margin-top: 20px;\n  animation: swing 2s ease-in-out infinite;\n  box-shadow: 0 100px 0 -97px #ffd700;\n}",
+    "demo_html": "<div class=\"pendulum\"></div>"
+  },
+  {
     "date": "2026-10-25",
     "theme": "地層",
     "title": "地層の堆積",
