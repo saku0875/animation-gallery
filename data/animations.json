@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-10-27",
+    "theme": "雨",
+    "title": "降る雨",
+    "keyframes_css": "@keyframes fall { 0% { transform: translateY(-10px); opacity: 1; } 90% { opacity: 1; } 100% { transform: translateY(190px); opacity: 0; } } @keyframes sway { 0%, 100% { transform: translateX(0px); } 50% { transform: translateX(8px); } } .demo-stage { width: 200px; height: 200px; background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%); position: relative; overflow: hidden; border-radius: 8px; box-shadow: inset 0 0 20px rgba(0,0,0,0.5); } .demo-stage::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(ellipse at center, rgba(255,255,255,0.1) 0%, transparent 70%); pointer-events: none; } .raindrop { position: absolute; width: 2px; height: 8px; background: linear-gradient(180deg, rgba(200,220,255,0.8) 0%, rgba(150,180,255,0.2) 100%); border-radius: 1px; opacity: 0; } .raindrop:nth-child(1) { left: 20px; animation: fall 1.2s linear infinite, sway 2s ease-in-out infinite; } .raindrop:nth-child(2) { left: 45px; animation: fall 1.4s linear 0.2s infinite, sway 2.2s ease-in-out 0.2s infinite; } .raindrop:nth-child(3) { left: 70px; animation: fall 1.3s linear 0.4s infinite, sway 2.1s ease-in-out 0.4s infinite; } .raindrop:nth-child(4) { left: 95px; animation: fall 1.5s linear 0.1s infinite, sway 2.3s ease-in-out 0.1s infinite; } .raindrop:nth-child(5) { left: 120px; animation: fall 1.2s linear 0.3s infinite, sway 2s ease-in-out 0.3s infinite; } .raindrop:nth-child(6) { left: 145px; animation: fall 1.4s linear 0.5s infinite, sway 2.2s ease-in-out 0.5s infinite; } .raindrop:nth-child(7) { left: 170px; animation: fall 1.3s linear 0.2s infinite, sway 2.1s ease-in-out 0.2s infinite; }",
+    "demo_html": "<div class='raindrop'></div><div class='raindrop'></div><div class='raindrop'></div><div class='raindrop'></div><div class='raindrop'></div><div class='raindrop'></div><div class='raindrop'></div>"
+  },
+  {
     "date": "2026-10-26",
     "theme": "振り子",
     "title": "振り子のアニメーション",
