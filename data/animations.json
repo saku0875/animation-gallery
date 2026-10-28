@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-10-28",
+    "theme": "ネオン",
+    "title": "ネオンパルス",
+    "keyframes_css": "@keyframes neonPulse {\n  0% {\n    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;\n    box-shadow: 0 0 10px #00ff00, inset 0 0 10px rgba(0, 255, 0, 0.3);\n  }\n  50% {\n    text-shadow: 0 0 20px #00ff00, 0 0 40px #00ff00, 0 0 60px #00ff00;\n    box-shadow: 0 0 20px #00ff00, inset 0 0 20px rgba(0, 255, 0, 0.5);\n  }\n  100% {\n    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;\n    box-shadow: 0 0 10px #00ff00, inset 0 0 10px rgba(0, 255, 0, 0.3);\n  }\n}\n\n@keyframes colorShift {\n  0% {\n    filter: hue-rotate(0deg);\n  }\n  50% {\n    filter: hue-rotate(60deg);\n  }\n  100% {\n    filter: hue-rotate(0deg);\n  }\n}\n\n.demo-stage {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 200px;\n  height: 200px;\n  background: #0a0a0a;\n}\n\n.demo-stage::before {\n  content: 'NEON';\n  font-size: 48px;\n  font-weight: bold;\n  color: #00ff00;\n  font-family: 'Courier New', monospace;\n  letter-spacing: 4px;\n  animation: neonPulse 2s ease-in-out infinite, colorShift 4s ease-in-out infinite;\n}",
+    "demo_html": "<div class=\"demo-stage\"></div>"
+  },
+  {
     "date": "2026-10-27",
     "theme": "雨",
     "title": "降る雨",
