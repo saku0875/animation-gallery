@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-10-29",
+    "theme": "呼吸",
+    "title": "呼吸する円",
+    "keyframes_css": "@keyframes breathing {\n  0% {\n    transform: scale(1);\n    opacity: 1;\n  }\n  50% {\n    transform: scale(1.3);\n    opacity: 0.6;\n  }\n  100% {\n    transform: scale(1);\n    opacity: 1;\n  }\n}\n\n.demo-stage {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 200px;\n  height: 200px;\n  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);\n}\n\n.demo-stage .breath-circle {\n  width: 80px;\n  height: 80px;\n  background: radial-gradient(circle, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.3) 100%);\n  border-radius: 50%;\n  animation: breathing 3s ease-in-out infinite;\n  box-shadow: 0 0 40px rgba(255,255,255,0.4);\n}",
+    "demo_html": "<div class=\"breath-circle\"></div>"
+  },
+  {
     "date": "2026-10-28",
     "theme": "ネオン",
     "title": "ネオンパルス",
